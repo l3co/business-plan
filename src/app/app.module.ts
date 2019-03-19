@@ -6,6 +6,8 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HeaderComponent} from './header/header.component';
 
+import {MatChipsModule} from '@angular/material/chips';
+
 import {
   MatButtonModule,
   MatFormFieldModule,
@@ -15,7 +17,8 @@ import {
   MatGridListModule,
   MatListModule,
   MatSelectModule,
-  MatCardModule, MatIconModule
+  MatCardModule,
+  MatIconModule
 } from '@angular/material';
 
 
@@ -25,6 +28,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {InputComponent} from './shared/input/input.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {BusinessComponent} from './business/business.component';
+import { CardComponent } from './dashboard/card/card.component';
+import { ActionComponent } from './dashboard/card/action/action.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import {BusinessComponent} from './business/business.component';
     HeaderComponent,
     InputComponent,
     DashboardComponent,
-    BusinessComponent
+    BusinessComponent,
+    CardComponent,
+    ActionComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +55,7 @@ import {BusinessComponent} from './business/business.component';
     MatSelectModule,
     MatCardModule,
     MatIconModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatInputModule
   ],

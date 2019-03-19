@@ -19,11 +19,7 @@ export class DashboardComponent implements OnInit {
     this.startup$ = this.service.listAll();
   }
 
-  totalInvestments(startup: Startup) {
-    return this.service.totalInvestments(startup);
-  }
+  createStartup() {
 
-  totalProvision(startup: Startup) {
-    return this.service.totalProvision(startup);
   }
 }

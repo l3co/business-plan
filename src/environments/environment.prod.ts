@@ -7,5 +7,5 @@ export const environment = {
     projectId: 'business-plan-22782',
     storageBucket: 'business-plan-22782.appspot.com',
     messagingSenderId: '803304598746'
-  }
+  },
 };
