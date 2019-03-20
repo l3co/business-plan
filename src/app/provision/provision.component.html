@@ -1,3 +1,17 @@
-<p>
-  provision works!
-</p>
+<div class="container">
+  <h1>Retornos de invesimento</h1>
+  <mat-form-field color="accent">
+    <input name="idea"
+           [(ngModel)]="provision.name"
+           matInput placeholder="Nome do investimento">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <input type="number" name="objective" matInput
+           [(ngModel)]="provision.value"
+           placeholder="Valor do investimento">
+  </mat-form-field>
+
+  <button mat-button class="bt-center" color="accent" (click)="saveProvision()">Adicionar
+  </button>
+</div>

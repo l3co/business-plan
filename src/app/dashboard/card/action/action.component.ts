@@ -4,6 +4,8 @@ import {DocsService} from '../../../docs.service';
 import {MatDialog} from '@angular/material';
 import {InvestmentsComponent} from '../../../investments/investments.component';
 import {ConcurrencesComponent} from '../../../concurrences/concurrences.component';
+import {ProvisionComponent} from '../../../provision/provision.component';
+import {MonetizeComponent} from '../../../monetize/monetize.component';
 
 @Component({
   selector: 'l3co-action',
@@ -34,6 +36,20 @@ export class ActionComponent implements OnInit {
 
   callDialogConcurrence(startup: Startup) {
     this.dialog.open(ConcurrencesComponent, {
+      width: '60%',
+      data: startup
+    });
+  }
+
+  callDialogProvision(startup: Startup) {
+    this.dialog.open(ProvisionComponent, {
+      width: '60%',
+      data: startup
+    });
+  }
+
+  callDialogMonetize(startup: Startup) {
+    this.dialog.open(MonetizeComponent, {
       width: '60%',
       data: startup
     });

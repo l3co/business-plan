@@ -1,3 +1,18 @@
-<p>
-  monetize works!
-</p>
+<div class="container">
+  <h1>Formas de monetização</h1>
+  <mat-form-field color="accent">
+    <input name="idea"
+           [(ngModel)]="monetize.description"
+           matInput placeholder="Descrição basica da monetização">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <textarea name="objective" matInput
+              [(ngModel)]="monetize.note"
+              placeholder="Descrição das forma de monetização">
+    </textarea>
+  </mat-form-field>
+
+  <button mat-button class="bt-center" color="accent" (click)="createMonetize()">Adicionar
+  </button>
+</div>
