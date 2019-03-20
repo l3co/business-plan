@@ -1,4 +1,4 @@
-<button mat-fab color="accent" class="card-button" (click)="addInvestment(startup)">
+<button mat-fab color="accent" class="card-button" (click)="callDialogInvestment(startup)">
   <mat-icon>money_off</mat-icon>
   <p class="info-btn">investimento</p>
 </button>
@@ -6,7 +6,7 @@
   <mat-icon>attach_money</mat-icon>
   <p class="info-btn">retorno</p>
 </button>
-<button mat-fab color="accent" class="card-button">
+<button mat-fab color="accent" class="card-button" (click)="callDialogConcurrence(startup)">
   <mat-icon>business</mat-icon>
   <p class="info-btn">concorrência</p>
 </button>

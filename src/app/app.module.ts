@@ -40,6 +40,7 @@ import {InvestmentsComponent} from './investments/investments.component';
 @NgModule({
   entryComponents: [
     InvestmentsComponent,
+    ConcurrencesComponent
   ],
   declarations: [
     AppComponent,

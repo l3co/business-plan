@@ -1,3 +1,17 @@
-<p>
-  concurrences works!
-</p>
+<div class="container">
+  <h1>Adicionar concorrentes</h1>
+  <mat-form-field color="accent">
+    <input name="idea"
+           [(ngModel)]="concurrences.name"
+           matInput placeholder="Nome do concorrente">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <input name="objective" matInput
+           [(ngModel)]="concurrences.site"
+           placeholder="Site do concorrente">
+  </mat-form-field>
+
+  <button mat-button class="bt-center" color="accent" (click)="saveConcurrences()">Adicionar
+  </button>
+</div>
