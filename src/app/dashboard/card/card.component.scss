@@ -4,6 +4,13 @@
     margin: 2px;
     max-width: 90%;
   }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 @media(min-width: 600px) and (max-width: 800px) {
@@ -11,6 +18,13 @@
     float: left;
     margin: 2px;
     max-width: 90%;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -20,11 +34,11 @@
     margin: 2px;
     max-width: 390px;
   }
-}
 
-.card-objective {
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 380px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
