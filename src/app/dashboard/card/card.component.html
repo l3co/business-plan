@@ -8,8 +8,8 @@
     <p class="card-objective">{{startup.objective}}</p>
     <p>Mercado de atuação: {{startup.market}}</p>
     <mat-chip-list>
-      <mat-chip class="investment">Investimento : {{ totalInvestments(startup) | currency: 'BRL': true}}</mat-chip>
-      <mat-chip class="provision">Retorno : {{ totalProvision(startup) | currency: 'BRL': true}}</mat-chip>
+      <mat-chip class="investment">Investimento : {{ totalInvestments(startup) | currency: 'BRL'}}</mat-chip>
+      <mat-chip class="provision">Retorno : {{ totalProvision(startup) | currency: 'BRL'}}</mat-chip>
     </mat-chip-list>
   </mat-card-content>
   <mat-card-actions>

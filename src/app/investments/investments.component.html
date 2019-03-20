@@ -1,3 +1,17 @@
-<p>
-  investments works!
-</p>
+<div class="container">
+  <h1>Novo investimento</h1>
+  <mat-form-field color="accent">
+    <input name="idea"
+           [(ngModel)]="investment.name"
+           matInput placeholder="Nome do investimento">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <input type="number" name="objective" matInput
+           [(ngModel)]="investment.value"
+           placeholder="Valor do investimento">
+  </mat-form-field>
+
+  <button mat-button class="bt-center" color="accent" (click)="saveInvestment()">Registrar Idéia
+  </button>
+</div>

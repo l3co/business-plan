@@ -31,21 +31,24 @@ import {BusinessComponent} from './business/business.component';
 import {CardComponent} from './dashboard/card/card.component';
 import {ActionComponent} from './dashboard/card/action/action.component';
 import {FormsModule} from '@angular/forms';
-import {InvestmentsComponent} from './investments/investments.component';
 import {ProvisionComponent} from './provision/provision.component';
 import {ProductsComponent} from './products/products.component';
 import {ConcurrencesComponent} from './concurrences/concurrences.component';
 import {MonetizeComponent} from './monetize/monetize.component';
+import {InvestmentsComponent} from './investments/investments.component';
 
 @NgModule({
+  entryComponents: [
+    InvestmentsComponent,
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
     DashboardComponent,
     BusinessComponent,
     CardComponent,
-    ActionComponent,
     InvestmentsComponent,
+    ActionComponent,
     ProvisionComponent,
     ProductsComponent,
     ConcurrencesComponent,

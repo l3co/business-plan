@@ -37,4 +37,11 @@ export class StartupService {
       .map(value => value.value)
       .reduce((prev, value) => prev + value, 0);
   }
+
+  update(data: Startup) {
+    return this
+      .startup$
+      .doc<Startup>(data.uid)
+      .update(data);
+  }
 }
