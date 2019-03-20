@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {StartupService} from '../startup.service';
 import {Observable} from 'rxjs';
 import {Startup} from '../models/startup.models';
+import {MatDialog} from '@angular/material';
+import {BusinessComponent} from '../business/business.component';
 
 @Component({
   selector: 'l3co-dashboard',
@@ -12,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
   startup$: Observable<Startup[]>;
 
-  constructor(private service: StartupService) {
+  constructor(private service: StartupService, private dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -20,6 +22,8 @@ export class DashboardComponent implements OnInit {
   }
 
   createStartup() {
-
+    this.dialog.open(BusinessComponent, {
+      width: '50%'
+    });
   }
 }

@@ -18,28 +18,38 @@ import {
   MatListModule,
   MatSelectModule,
   MatCardModule,
-  MatIconModule
+  MatIconModule,
+  MatDialogModule
 } from '@angular/material';
 
 
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {InputComponent} from './shared/input/input.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {BusinessComponent} from './business/business.component';
-import { CardComponent } from './dashboard/card/card.component';
-import { ActionComponent } from './dashboard/card/action/action.component';
+import {CardComponent} from './dashboard/card/card.component';
+import {ActionComponent} from './dashboard/card/action/action.component';
+import {FormsModule} from '@angular/forms';
+import {InvestmentsComponent} from './investments/investments.component';
+import {ProvisionComponent} from './provision/provision.component';
+import {ProductsComponent} from './products/products.component';
+import {ConcurrencesComponent} from './concurrences/concurrences.component';
+import {MonetizeComponent} from './monetize/monetize.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    InputComponent,
     DashboardComponent,
     BusinessComponent,
     CardComponent,
-    ActionComponent
+    ActionComponent,
+    InvestmentsComponent,
+    ProvisionComponent,
+    ProductsComponent,
+    ConcurrencesComponent,
+    MonetizeComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,9 @@ import { ActionComponent } from './dashboard/card/action/action.component';
     MatIconModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

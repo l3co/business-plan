@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {StartupService} from '../startup.service';
+import {Startup} from '../models/startup.models';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'l3co-business',
@@ -7,13 +10,27 @@ import {Component, OnInit} from '@angular/core';
 })
 export class BusinessComponent implements OnInit {
 
-  constructor() {
+  startup: Startup = {
+    uid: '',
+    idea: '',
+    objective: '',
+    market: '',
+    monetize: [],
+    provision: [],
+    investments: [],
+    products: [],
+    concurrences: []
+  };
+
+  constructor(private service: StartupService,
+              private dialogRef: MatDialogRef<BusinessComponent>) {
   }
 
   ngOnInit() {
   }
 
-  saveRequirementsAndNext() {
-
+  saveStartup() {
+    return this.service.create(this.startup)
+      .then(() => this.dialogRef.close());
   }
 }

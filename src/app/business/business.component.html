@@ -1,18 +1,18 @@
-<l3co-input title="Cadastre sua ideia"
-            [functionReference]="saveRequirementsAndNext()"
-            [btnDescription]="'Salvar/Avançar'">
-
+<div class="container">
+  <h1>Cadastre sua ideia</h1>
   <mat-form-field color="accent">
-    <input name="idea" matInput placeholder="Ideia do applicativo">
+    <input name="idea" [(ngModel)]="startup.idea" matInput placeholder="Ideia do applicativo">
   </mat-form-field>
 
   <mat-form-field color="accent">
       <textarea name="objective" matInput
-                placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando"></textarea>
+                [(ngModel)]="startup.objective"
+                placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
+      </textarea>
   </mat-form-field>
 
   <mat-form-field color="accent">
-    <mat-select placeholder="Select">
+    <mat-select placeholder="Select" [(ngModel)]="startup.market">
       <mat-option value="technology">Technology</mat-option>
       <mat-option value="health">Health</mat-option>
       <mat-option value="food">Food</mat-option>
@@ -21,4 +21,7 @@
     </mat-select>
   </mat-form-field>
 
-</l3co-input>
+  <button mat-button class="bt-center" color="accent"
+          (click)="saveStartup()">Registrar Idéia
+  </button>
+</div>
