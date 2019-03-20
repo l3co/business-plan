@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {Startup} from '../models/startup.models';
 import {MatDialog} from '@angular/material';
 import {BusinessComponent} from '../business/business.component';
+import {HelpComponent} from '../help/help.component';
 
 @Component({
   selector: 'l3co-dashboard',
@@ -24,6 +25,12 @@ export class DashboardComponent implements OnInit {
   createStartup() {
     this.dialog.open(BusinessComponent, {
       width: '60%'
+    });
+  }
+
+  help() {
+    this.dialog.open(HelpComponent, {
+      width: '30%'
     });
   }
 }

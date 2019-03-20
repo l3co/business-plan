@@ -17,17 +17,23 @@ body {
   margin: 5em auto;
 }
 
-.investment{
+.investment {
   background-color: lightcoral !important;
   color: white !important;
 }
 
-.provision{
+.provision {
   background-color: lightseagreen !important;
   color: white !important;
 }
 
-.fab-bottom-right{
+.fab-bottom-help {
+  position: fixed !important;
+  right: 15px;
+  bottom: 75px;
+}
+
+.fab-bottom-add {
   position: fixed !important;
   right: 15px;
   bottom: 15px;

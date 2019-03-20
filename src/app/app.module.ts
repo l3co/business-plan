@@ -36,6 +36,7 @@ import {ProductsComponent} from './products/products.component';
 import {ConcurrencesComponent} from './concurrences/concurrences.component';
 import {MonetizeComponent} from './monetize/monetize.component';
 import {InvestmentsComponent} from './investments/investments.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   entryComponents: [
@@ -43,7 +44,8 @@ import {InvestmentsComponent} from './investments/investments.component';
     ConcurrencesComponent,
     ProvisionComponent,
     MonetizeComponent,
-    ProductsComponent
+    ProductsComponent,
+    HelpComponent
   ],
   declarations: [
     AppComponent,
@@ -56,7 +58,8 @@ import {InvestmentsComponent} from './investments/investments.component';
     ProvisionComponent,
     ProductsComponent,
     ConcurrencesComponent,
-    MonetizeComponent
+    MonetizeComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
