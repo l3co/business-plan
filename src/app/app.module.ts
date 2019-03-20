@@ -42,7 +42,8 @@ import {InvestmentsComponent} from './investments/investments.component';
     InvestmentsComponent,
     ConcurrencesComponent,
     ProvisionComponent,
-    MonetizeComponent
+    MonetizeComponent,
+    ProductsComponent
   ],
   declarations: [
     AppComponent,

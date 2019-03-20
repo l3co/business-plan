@@ -6,6 +6,7 @@ import {InvestmentsComponent} from '../../../investments/investments.component';
 import {ConcurrencesComponent} from '../../../concurrences/concurrences.component';
 import {ProvisionComponent} from '../../../provision/provision.component';
 import {MonetizeComponent} from '../../../monetize/monetize.component';
+import {ProductsComponent} from '../../../products/products.component';
 
 @Component({
   selector: 'l3co-action',
@@ -50,6 +51,13 @@ export class ActionComponent implements OnInit {
 
   callDialogMonetize(startup: Startup) {
     this.dialog.open(MonetizeComponent, {
+      width: '60%',
+      data: startup
+    });
+  }
+
+  callDialogProduct(startup: Startup) {
+    this.dialog.open(ProductsComponent, {
       width: '60%',
       data: startup
     });

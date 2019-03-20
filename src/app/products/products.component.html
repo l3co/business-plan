@@ -1,3 +1,18 @@
-<p>
-  products works!
-</p>
+<div class="container">
+  <h1>Criar Produtos</h1>
+  <mat-form-field color="accent">
+    <input name="idea"
+           [(ngModel)]="product.name"
+           matInput placeholder="Nome do produto">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <textarea name="objective" matInput
+              [(ngModel)]="product.objective"
+              placeholder="Objetivo do produto informado">
+    </textarea>
+  </mat-form-field>
+
+  <button mat-button class="bt-center" color="accent" (click)="saveProduct()">Adicionar
+  </button>
+</div>
