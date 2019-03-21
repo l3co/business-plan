@@ -29,4 +29,5 @@ export class ProvisionComponent implements OnInit {
       .update(this.data)
       .then(() => this.dialogRef.close());
   }
+
 }

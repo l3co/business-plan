@@ -1,8 +1,23 @@
-@media(min-width: 0px) and(max-width: 600px) {
+@media(min-width: 0px) and(max-width: 400px) {
   .dash-card {
     float: left;
     margin: 2px;
-    max-width: 90%;
+    width: 90%;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media(min-width: 400px) and(max-width: 600px) {
+  .dash-card {
+    float: left;
+    margin: 2px;
+    width: 90%;
   }
 
   .card-objective, .cart-title {
@@ -17,7 +32,7 @@
   .dash-card {
     float: left;
     margin: 2px;
-    max-width: 90%;
+    width: 90%;
   }
 
   .card-objective, .cart-title {
@@ -32,12 +47,12 @@
   .dash-card {
     float: left;
     margin: 2px;
-    max-width: 390px;
+    width: 370px;
   }
 
   .card-objective, .cart-title {
     white-space: nowrap;
-    width: 380px;
+    width: 360px;
     overflow: hidden;
     text-overflow: ellipsis;
   }

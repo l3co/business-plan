@@ -1,6 +1,17 @@
-.logo {
-  width: 3%;
+@media(max-width: 800px) {
+  .logo {
+    width: 20%;
+    margin: 10px auto;
+  }
 }
+
+@media(min-width: 800px) {
+  .logo {
+    width: 6%;
+    margin: 2px auto;
+  }
+}
+
 
 .logo-title {
   font-size: small;
