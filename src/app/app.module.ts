@@ -40,6 +40,7 @@ import {MonetizeComponent} from './startup/monetize/monetize.component';
 import {InvestmentsComponent} from './startup/investments/investments.component';
 import { HelpComponent } from './help/help.component';
 import { UserComponent } from './user/user.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   entryComponents: [
@@ -85,7 +86,8 @@ import { UserComponent } from './user/user.component';
     MatDialogModule,
     MatTooltipModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
