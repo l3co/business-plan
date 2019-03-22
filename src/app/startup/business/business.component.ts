@@ -19,7 +19,8 @@ export class BusinessComponent implements OnInit {
     provision: [],
     investments: [],
     products: [],
-    concurrences: []
+    concurrences: [],
+    user_id: ''
   };
 
   constructor(private service: StartupService,
