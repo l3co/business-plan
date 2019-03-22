@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'l3co-help',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<HelpComponent>) {
+  }
 
   ngOnInit() {
   }
 
+  closeDialog() {
+    this.dialogRef.close();
+  }
 }

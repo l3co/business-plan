@@ -27,6 +27,6 @@ export class DashboardComponent implements OnInit {
   }
 
   help() {
-    this.dialog.open(HelpComponent);
+    this.dialog.open(HelpComponent, {width: '40%'});
   }
 }

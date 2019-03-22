@@ -1,36 +1,37 @@
 <div class="container">
-  <h3>Menu de ajuda</h3>
-  <mat-list>
-    <mat-list-item>
+  <h1 mat-dialog-title>Menu de ajuda</h1>
+  <mat-dialog-content>
+    <p>
       <mat-icon>money_off</mat-icon>
       - Adicionar novo investimento
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <mat-icon>attach_money</mat-icon>
       - Adicionar retorno do investimento
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <mat-icon>business</mat-icon>
       - Adicionar concorrentes
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <mat-icon>monetization_on</mat-icon>
       - Adicionar forma de monetização
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <mat-icon>apps</mat-icon>
       - Adicionar novos produtos
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <mat-icon>save_alt</mat-icon>
       - Exportar para um documento word
-    </mat-list-item>
-    <mat-list-item>
+    </p>
+    <p>
       <a style="color: white;" target="_blank"
-        href="https://www.amazon.com.br/Plano-Neg%C3%B3cios-com-Modelo-Canvas/dp/852162963X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=plano+de+negocio+com+modelo+canbas&qid=1553192176&s=gateway&sr=8-1-spell">
+         href="https://www.amazon.com.br/Plano-Neg%C3%B3cios-com-Modelo-Canvas/dp/852162963X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=plano+de+negocio+com+modelo+canbas&qid=1553192176&s=gateway&sr=8-1-spell">
         <mat-icon>book</mat-icon>
         - Referência ao livro utilizado
       </a>
-    </mat-list-item>
-  </mat-list>
+    </p>
+  </mat-dialog-content>
+  <button mat-button (click)="closeDialog()">Fechar</button>
 </div>
