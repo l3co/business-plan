@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {BusinessComponent} from './business/business.component';
+import {BusinessComponent} from './startup/business/business.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [

@@ -1,8 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Startup} from '../models/startup.models';
-import {StartupService} from '../startup.service';
+import {Startup} from '../../models/startup.models';
+import {StartupService} from '../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {Investments} from '../models/finances.models';
+import {Investments} from '../../models/finances.models';
 
 @Component({
   selector: 'l3co-investments',

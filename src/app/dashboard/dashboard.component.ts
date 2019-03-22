@@ -3,7 +3,7 @@ import {StartupService} from '../startup.service';
 import {Observable} from 'rxjs';
 import {Startup} from '../models/startup.models';
 import {MatDialog} from '@angular/material';
-import {BusinessComponent} from '../business/business.component';
+import {BusinessComponent} from '../startup/business/business.component';
 import {HelpComponent} from '../help/help.component';
 
 @Component({

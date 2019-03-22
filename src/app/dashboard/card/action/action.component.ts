@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Startup} from '../../../models/startup.models';
 import {DocsService} from '../../../docs.service';
 import {MatDialog} from '@angular/material';
-import {InvestmentsComponent} from '../../../investments/investments.component';
-import {ConcurrencesComponent} from '../../../concurrences/concurrences.component';
-import {ProvisionComponent} from '../../../provision/provision.component';
-import {MonetizeComponent} from '../../../monetize/monetize.component';
-import {ProductsComponent} from '../../../products/products.component';
+import {InvestmentsComponent} from '../../../startup/investments/investments.component';
+import {ConcurrencesComponent} from '../../../startup/concurrences/concurrences.component';
+import {ProvisionComponent} from '../../../startup/provision/provision.component';
+import {MonetizeComponent} from '../../../startup/monetize/monetize.component';
+import {ProductsComponent} from '../../../startup/products/products.component';
 
 @Component({
   selector: 'l3co-action',

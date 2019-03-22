@@ -1,8 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Concurrences} from '../models/concurrences.models';
-import {StartupService} from '../startup.service';
+import {Concurrences} from '../../models/concurrences.models';
+import {StartupService} from '../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {Startup} from '../models/startup.models';
+import {Startup} from '../../models/startup.models';
 
 @Component({
   selector: 'l3co-concurrences',

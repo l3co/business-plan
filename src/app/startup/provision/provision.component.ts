@@ -1,8 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Provision} from '../models/finances.models';
-import {StartupService} from '../startup.service';
+import {Provision} from '../../models/finances.models';
+import {StartupService} from '../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {Startup} from '../models/startup.models';
+import {Startup} from '../../models/startup.models';
 
 @Component({
   selector: 'l3co-provision',

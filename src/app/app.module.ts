@@ -19,7 +19,7 @@ import {
   MatSelectModule,
   MatCardModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule, MatBadgeModule
 } from '@angular/material';
 
 
@@ -27,15 +27,15 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {BusinessComponent} from './business/business.component';
+import {BusinessComponent} from './startup/business/business.component';
 import {CardComponent} from './dashboard/card/card.component';
 import {ActionComponent} from './dashboard/card/action/action.component';
 import {FormsModule} from '@angular/forms';
-import {ProvisionComponent} from './provision/provision.component';
-import {ProductsComponent} from './products/products.component';
-import {ConcurrencesComponent} from './concurrences/concurrences.component';
-import {MonetizeComponent} from './monetize/monetize.component';
-import {InvestmentsComponent} from './investments/investments.component';
+import {ProvisionComponent} from './startup/provision/provision.component';
+import {ProductsComponent} from './startup/products/products.component';
+import {ConcurrencesComponent} from './startup/concurrences/concurrences.component';
+import {MonetizeComponent} from './startup/monetize/monetize.component';
+import {InvestmentsComponent} from './startup/investments/investments.component';
 import { HelpComponent } from './help/help.component';
 
 @NgModule({
@@ -59,7 +59,7 @@ import { HelpComponent } from './help/help.component';
     ProductsComponent,
     ConcurrencesComponent,
     MonetizeComponent,
-    HelpComponent
+    HelpComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +71,7 @@ import { HelpComponent } from './help/help.component';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     MatButtonModule,
+    MatBadgeModule,
     MatGridListModule,
     MatSelectModule,
     MatCardModule,

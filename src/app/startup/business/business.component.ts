@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {StartupService} from '../startup.service';
-import {Startup} from '../models/startup.models';
+import {StartupService} from '../../startup.service';
+import {Startup} from '../../models/startup.models';
 import {MatDialogRef} from '@angular/material';
 
 @Component({
