@@ -13,4 +13,5 @@ export interface Startup {
   investments: Investments[];
   provision: Provision[];
   products: Products[];
+  user_id: string;
 }

@@ -2,13 +2,14 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {Injectable} from '@angular/core';
 import {Startup} from './models/startup.models';
 import {Observable} from 'rxjs';
+import {UserService} from './user.service';
 
 @Injectable({providedIn: 'root'})
 export class StartupService {
 
   startup$: AngularFirestoreCollection<Startup>;
 
-  constructor(private db: AngularFirestore) {
+  constructor(private db: AngularFirestore, private userService: UserService) {
     this.bootstrapFirestore();
   }
 
@@ -19,11 +20,17 @@ export class StartupService {
   create(startup: Startup): Promise<void> {
     const id: string = this.db.createId();
     startup.uid = id;
+    startup.user_id = this.userService.getUserAuthenticated();
     return this.startup$.doc<Startup>(id).set(startup);
   }
 
   listAll(): Observable<Startup[]> {
-    return this.startup$.valueChanges();
+
+    return this.db
+      .collection<Startup>('startup', ref =>
+        ref.where('user_id', '==', this.userService.getUserAuthenticated()))
+      .valueChanges();
+
   }
 
   totalInvestments(startup: Startup): number {

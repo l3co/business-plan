@@ -21,6 +21,7 @@ import {
   MatIconModule,
   MatDialogModule,
   MatTooltipModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 
@@ -83,7 +84,8 @@ import { UserComponent } from './user/user.component';
     MatInputModule,
     MatDialogModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
