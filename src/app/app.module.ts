@@ -19,7 +19,8 @@ import {
   MatSelectModule,
   MatCardModule,
   MatIconModule,
-  MatDialogModule, MatBadgeModule
+  MatDialogModule,
+  MatTooltipModule,
 } from '@angular/material';
 
 
@@ -71,7 +72,6 @@ import { HelpComponent } from './help/help.component';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     MatButtonModule,
-    MatBadgeModule,
     MatGridListModule,
     MatSelectModule,
     MatCardModule,
@@ -80,6 +80,7 @@ import { HelpComponent } from './help/help.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
+    MatTooltipModule,
     FormsModule
   ],
   providers: [],

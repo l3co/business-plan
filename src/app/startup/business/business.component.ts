@@ -30,7 +30,11 @@ export class BusinessComponent implements OnInit {
   }
 
   saveStartup() {
-    return this.service.create(this.startup)
+    this.service.create(this.startup)
       .then(() => this.dialogRef.close());
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 }

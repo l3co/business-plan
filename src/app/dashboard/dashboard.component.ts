@@ -23,9 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   createStartup() {
-    this.dialog.open(BusinessComponent, {
-      width: '60%'
-    });
+    this.dialog.open(BusinessComponent);
   }
 
   help() {

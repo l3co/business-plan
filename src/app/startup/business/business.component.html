@@ -1,27 +1,32 @@
 <div class="container">
-  <h3>Nova Idea</h3>
-  <mat-form-field color="accent">
-    <input name="idea" [(ngModel)]="startup.idea" matInput placeholder="Ideia do applicativo">
-  </mat-form-field>
+  <h1 mat-dialog-title>Nova Idea</h1>
+  <mat-dialog-content>
+    <mat-form-field color="accent">
+      <input name="idea" [(ngModel)]="startup.idea" matInput placeholder="Ideia do applicativo">
+    </mat-form-field>
 
-  <mat-form-field color="accent">
+    <mat-form-field color="accent">
       <textarea name="objective" matInput
                 [(ngModel)]="startup.objective"
                 placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
       </textarea>
-  </mat-form-field>
+    </mat-form-field>
 
-  <mat-form-field color="accent">
-    <mat-select placeholder="Select" [(ngModel)]="startup.market">
-      <mat-option value="technology">Technology</mat-option>
-      <mat-option value="health">Health</mat-option>
-      <mat-option value="food">Food</mat-option>
-      <mat-option value="finances">Finances</mat-option>
-      <mat-option value="market">Market</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field color="accent">
+      <mat-select placeholder="Select" [(ngModel)]="startup.market">
+        <mat-option value="technology">Technology</mat-option>
+        <mat-option value="health">Health</mat-option>
+        <mat-option value="food">Food</mat-option>
+        <mat-option value="finances">Finances</mat-option>
+        <mat-option value="market">Market</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-dialog-content>
 
-  <button mat-button class="bt-center" color="accent"
-          (click)="saveStartup()">Registrar Idéia
-  </button>
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Cancelar</button>
+    <button mat-button class="bt-center" color="accent" (click)="saveStartup()">Registrar Idéia</button>
+  </div>
+
+
 </div>
