@@ -5,7 +5,7 @@
   "heroku-postbuild": "ng build --prod",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "development": "ng serve",
     "build": "ng build",
     "test": "ng test",
