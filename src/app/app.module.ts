@@ -38,6 +38,7 @@ import {ConcurrencesComponent} from './startup/concurrences/concurrences.compone
 import {MonetizeComponent} from './startup/monetize/monetize.component';
 import {InvestmentsComponent} from './startup/investments/investments.component';
 import { HelpComponent } from './help/help.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   entryComponents: [
@@ -61,6 +62,7 @@ import { HelpComponent } from './help/help.component';
     ConcurrencesComponent,
     MonetizeComponent,
     HelpComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
