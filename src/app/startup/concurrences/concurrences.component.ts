@@ -29,4 +29,8 @@ export class ConcurrencesComponent implements OnInit {
       .update(this.data)
       .then(() => this.dialogRef.close());
   }
+
+  closeDialog() {
+    this.dialogRef.close();
+  }
 }
