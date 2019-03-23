@@ -30,4 +30,7 @@ export class ProductsComponent implements OnInit {
       .then(() => this.dialogRef.close());
   }
 
+  closeDialog() {
+    this.dialogRef.close();
+  }
 }
