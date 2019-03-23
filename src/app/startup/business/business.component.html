@@ -1,29 +1,34 @@
 <div class="container">
   <h1 mat-dialog-title>Nova Idea</h1>
   <mat-dialog-content>
+
     <mat-form-field color="accent">
-      <input name="idea" [(ngModel)]="startup.idea" matInput placeholder="Ideia do applicativo">
+      <input name="idea" matInput required
+             #iptIdea="ngModel"
+             [(ngModel)]="startup.idea"
+             placeholder="Ideia do applicativo">
     </mat-form-field>
 
     <mat-form-field color="accent">
-      <textarea name="objective" matInput
+      <textarea name="objective" matInput required
                 [(ngModel)]="startup.objective"
+                #iptObjective="ngModel"
                 placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
       </textarea>
     </mat-form-field>
 
     <mat-form-field color="accent">
-      <mat-select placeholder="Select" [(ngModel)]="startup.market">
-        <mat-option
-          *ngFor="let category of categories"
-          value="{{category.value}}">{{category.name}}</mat-option>
+      <mat-select required placeholder="Select" [(ngModel)]="startup.market">
+        <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
       </mat-select>
     </mat-form-field>
   </mat-dialog-content>
 
   <div mat-dialog-actions>
     <button mat-button (click)="closeDialog()">Cancelar</button>
-    <button mat-button class="bt-center" color="accent" (click)="saveStartup()">Registrar Idéia</button>
+    <button mat-button [disabled]="iptIdea.invalid || iptObjective.invalid" class="bt-center" color="accent"
+            (click)="saveStartup()">Registrar Idéia
+    </button>
   </div>
 
 
