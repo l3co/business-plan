@@ -21,10 +21,6 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveUser() {
-
-  }
-
   logout() {
     if (this.logoutStatus) {
       this.service.create(this.user)
@@ -52,11 +48,9 @@ export class UserComponent implements OnInit {
 
   private deactivateLogout() {
     this.logoutStatus = false;
-    this.logoutText = 'Logout';
   }
 
   private activateLogout() {
-    this.logoutText = 'Registrar usuário';
     this.logoutStatus = true;
   }
 }

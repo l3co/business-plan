@@ -2,18 +2,18 @@
   <h1 mat-dialog-title>Usuário</h1>
 
   <mat-form-field color="accent" *ngIf="logoutStatus">
-    <input name="name" [(ngModel)]="user.name" matInput placeholder="Seu nome">
+    <input name="name" [(ngModel)]="user.name" required matInput placeholder="Seu nome">
   </mat-form-field>
 
   <mat-form-field color="accent">
-    <input name="mail" [(ngModel)]="user.mail" matInput placeholder="Digite seu email">
+    <input name="mail" [(ngModel)]="user.mail" required matInput placeholder="Digite seu email">
   </mat-form-field>
 
   <mat-form-field color="accent">
-    <input type="password" name="password" [(ngModel)]="user.password" matInput placeholder="Senha">
+    <input type="password" name="password" required [(ngModel)]="user.password" matInput placeholder="Senha">
   </mat-form-field>
   <mat-card-actions>
     <button mat-button class="bt-center" color="accent" (click)="login()">Login</button>
-    <button mat-button class="bt-center" color="accent" (click)="logout()">{{logoutText}}</button>
+    <button mat-button class="bt-center" color="accent" (click)="logout()">Registrar usuário</button>
   </mat-card-actions>
 </div>
