@@ -14,11 +14,9 @@
 
     <mat-form-field color="accent">
       <mat-select placeholder="Select" [(ngModel)]="startup.market">
-        <mat-option value="technology">Technology</mat-option>
-        <mat-option value="health">Health</mat-option>
-        <mat-option value="food">Food</mat-option>
-        <mat-option value="finances">Finances</mat-option>
-        <mat-option value="market">Market</mat-option>
+        <mat-option
+          *ngFor="let category of categories"
+          value="{{category.value}}">{{category.name}}</mat-option>
       </mat-select>
     </mat-form-field>
   </mat-dialog-content>

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {StartupService} from '../../startup.service';
 import {Startup} from '../../models/startup.models';
 import {MatDialogRef} from '@angular/material';
+import {Category} from '../../models/market.models';
 
 @Component({
   selector: 'l3co-business',
@@ -23,11 +24,14 @@ export class BusinessComponent implements OnInit {
     user_id: ''
   };
 
+  categories: Category[];
+
   constructor(private service: StartupService,
               private dialogRef: MatDialogRef<BusinessComponent>) {
   }
 
   ngOnInit() {
+    this.service.listAllCategory().subscribe(value => this.categories = value);
   }
 
   saveStartup() {
@@ -37,5 +41,9 @@ export class BusinessComponent implements OnInit {
 
   closeDialog() {
     this.dialogRef.close();
+  }
+
+  listAllCategories() {
+    return this.service.listAllCategory();
   }
 }

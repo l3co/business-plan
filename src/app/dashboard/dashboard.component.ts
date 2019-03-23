@@ -16,6 +16,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.startup$ = this.service.listAll();
+    this.startup$ = this.service.listAllStartupByUserId();
   }
 }

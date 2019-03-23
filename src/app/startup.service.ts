@@ -3,11 +3,13 @@ import {Injectable} from '@angular/core';
 import {Startup} from './models/startup.models';
 import {Observable} from 'rxjs';
 import {UserService} from './user.service';
+import {Category} from './models/market.models';
 
 @Injectable({providedIn: 'root'})
 export class StartupService {
 
   startup$: AngularFirestoreCollection<Startup>;
+  category$: AngularFirestoreCollection<Category>;
 
   constructor(private db: AngularFirestore, private userService: UserService) {
     this.bootstrapFirestore();
@@ -15,6 +17,7 @@ export class StartupService {
 
   private bootstrapFirestore() {
     this.startup$ = this.db.collection<Startup>('/startup');
+    this.category$ = this.db.collection<Category>('/categories');
   }
 
   create(startup: Startup): Promise<void> {
@@ -24,13 +27,17 @@ export class StartupService {
     return this.startup$.doc<Startup>(id).set(startup);
   }
 
-  listAll(): Observable<Startup[]> {
+  listAllStartupByUserId(): Observable<Startup[]> {
 
     return this.db
       .collection<Startup>('startup', ref =>
         ref.where('user_id', '==', this.userService.getUserAuthenticated()))
       .valueChanges();
 
+  }
+
+  listAllCategory(): Observable<Category[]> {
+    return this.category$.valueChanges();
   }
 
   totalInvestments(startup: Startup): number {

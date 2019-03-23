@@ -64,7 +64,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ConcurrencesComponent,
     MonetizeComponent,
     HelpComponent,
-    UserComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
