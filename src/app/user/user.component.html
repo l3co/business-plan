@@ -1,19 +1,40 @@
 <div class="container">
   <h1 mat-dialog-title>Usuário</h1>
 
-  <mat-form-field color="accent" *ngIf="logoutStatus">
-    <input name="name" [(ngModel)]="user.name" required matInput placeholder="Seu nome">
+  <mat-form-field color="accent" *ngIf="singUpStatus">
+    <input name="name" type="text" [(ngModel)]="user.name" required matInput placeholder="Seu nome">
   </mat-form-field>
 
   <mat-form-field color="accent">
-    <input name="mail" [(ngModel)]="user.mail" required matInput placeholder="Digite seu email">
+    <input name="mail" type="email" [(ngModel)]="user.mail" #iptMail="ngModel" required matInput
+           placeholder="Digite seu email">
   </mat-form-field>
 
   <mat-form-field color="accent">
-    <input type="password" name="password" required [(ngModel)]="user.password" matInput placeholder="Senha">
+    <input type="password" name="password" #iptPass="ngModel" required [(ngModel)]="user.password" matInput
+           placeholder="Senha">
   </mat-form-field>
   <mat-card-actions>
-    <button mat-button class="bt-center" color="accent" (click)="login()">Login</button>
-    <button mat-button class="bt-center" color="accent" (click)="logout()">Registrar usuário</button>
+
+    <button mat-button
+            *ngIf="!singUpStatus"
+            [disabled]="iptMail.invalid || iptPass.invalid"
+            class="bt-center" color="accent" (click)="login()">Login
+    </button>
+
+    <button *ngIf="!singUpStatus" mat-button class="bt-center" color="accent" (click)="activateLogout()">Registrar
+      usuário
+    </button>
+
+    <button *ngIf="singUpStatus" mat-button class="bt-center" color="accent" (click)="deactivateLogout()">Voltar
+    </button>
+
+    <button mat-button
+            *ngIf="singUpStatus"
+            [disabled]="iptMail.invalid || iptPass.invalid"
+            class="bt-center" color="accent" (click)="singUp()">
+      Salvar
+    </button>
+
   </mat-card-actions>
 </div>

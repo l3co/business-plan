@@ -12,8 +12,7 @@ export class UserComponent implements OnInit {
 
   user: User = {id: '', name: '', mail: '', password: ''};
 
-  logoutStatus = false;
-  logoutText = 'Logout';
+  singUpStatus = false;
 
   constructor(private snackBar: MatSnackBar, private service: UserService) {
   }
@@ -21,8 +20,8 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout() {
-    if (this.logoutStatus) {
+  singUp() {
+    if (this.singUpStatus) {
       this.service.create(this.user)
         .then(() => {
           this.snackBar.open('Usuário criado com sucesso', 'Undo', {
@@ -38,7 +37,7 @@ export class UserComponent implements OnInit {
 
   login() {
 
-    if (this.logoutStatus) {
+    if (this.singUpStatus) {
       this.deactivateLogout();
       return;
     } else {
@@ -47,10 +46,10 @@ export class UserComponent implements OnInit {
   }
 
   private deactivateLogout() {
-    this.logoutStatus = false;
+    this.singUpStatus = false;
   }
 
   private activateLogout() {
-    this.logoutStatus = true;
+    this.singUpStatus = true;
   }
 }
