@@ -1,16 +1,34 @@
 <div class="container">
-  <h3>Retornos de invesimento</h3>
-  <mat-form-field color="accent">
-    <input name="idea"
-           [(ngModel)]="provision.name"
-           matInput placeholder="Nome do investimento">
-  </mat-form-field>
 
-  <mat-form-field color="accent">
-    <input type="number" name="objective" matInput
-           [(ngModel)]="provision.value"
-           placeholder="Valor do investimento">
-  </mat-form-field>
+  <div class="container">
+    <h1 mat-dialog-title>Retornos de invesimento</h1>
+    <mat-dialog-content>
 
-  <button mat-button class="bt-center" color="accent" (click)="saveProvision()">Adicionar</button>
+      <mat-form-field color="accent">
+        <input name="provision"
+               #iptProvision='ngModel'
+               required
+               [(ngModel)]="provision.name"
+               matInput placeholder="Nome do investimento">
+      </mat-form-field>
+
+      <mat-form-field color="accent">
+        <input type="number"
+               name="objective" matInput
+               #iptValue='ngModel' required
+               [(ngModel)]="provision.value"
+               placeholder="Valor do investimento">
+      </mat-form-field>
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="closeDialog()">Fechar</button>
+      <button mat-button
+              [disabled]="iptValue.invalid || iptProvision.invalid"
+              class="bt-center"
+              color="accent"
+              (click)="saveProvision()">Adicionar
+      </button>
+    </div>
+  </div>
 </div>

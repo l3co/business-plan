@@ -30,4 +30,7 @@ export class ProvisionComponent implements OnInit {
       .then(() => this.dialogRef.close());
   }
 
+  closeDialog() {
+    this.dialogRef.close();
+  }
 }
