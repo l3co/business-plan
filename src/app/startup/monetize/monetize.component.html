@@ -1,18 +1,28 @@
 <div class="container">
-  <h3>Formas de monetização</h3>
-  <mat-form-field color="accent">
-    <input name="idea"
-           [(ngModel)]="monetize.description"
-           matInput placeholder="Descrição basica da monetização">
-  </mat-form-field>
+  <h1 mat-dialog-title>Formas de monetização</h1>
+  <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <textarea name="objective" matInput
+    <mat-form-field color="accent">
+      <input name="description"
+             #iptDescription='ngModel' required
+             [(ngModel)]="monetize.description"
+             matInput placeholder="Forma de Monetização">
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+    <textarea name="note" matInput
+              #iptNote='ngModel' required
               [(ngModel)]="monetize.note"
-              placeholder="Descrição das forma de monetização">
+              placeholder="Descrição da monetização">
     </textarea>
-  </mat-form-field>
+    </mat-form-field>
 
-  <button mat-button class="bt-center" color="accent" (click)="createMonetize()">Adicionar
-  </button>
+  </mat-dialog-content>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Fechar</button>
+    <button mat-button
+            [disabled]="iptDescription.invalid || iptNote.invalid"
+            class="bt-center" color="accent" (click)="createMonetize()">Adicionar</button>
+  </div>
 </div>
