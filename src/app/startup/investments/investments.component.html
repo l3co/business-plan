@@ -1,17 +1,35 @@
 <div class="container">
-  <h3>Novo investimento</h3>
-  <mat-form-field color="accent">
-    <input name="idea"
-           [(ngModel)]="investment.name"
-           matInput placeholder="Nome do investimento">
-  </mat-form-field>
+  <h1 mat-dialog-title>Novo investimento</h1>
+  <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <input type="number" name="objective" matInput
-           [(ngModel)]="investment.value"
-           placeholder="Valor do investimento">
-  </mat-form-field>
+    <mat-form-field color="accent">
+      <input name="investment" required
+             #iptInvestment='ngModel'
+             [(ngModel)]="investment.name"
+             matInput placeholder="Nome do investimento">
+    </mat-form-field>
 
-  <button mat-button class="bt-center" color="accent" (click)="saveInvestment()">Adicionar
-  </button>
+    <mat-form-field color="accent">
+      <input type="number" name="value"
+             #iptValue='ngModel' required
+             matInput
+             [(ngModel)]="investment.value"
+             placeholder="Valor do investimento">
+    </mat-form-field>
+
+  </mat-dialog-content>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Fechar</button>
+    <button
+      mat-button
+      [disabled]="iptInvestment.invalid || iptValue.invalid"
+      class="bt-center"
+      color="accent"
+      (click)="saveInvestment()">
+      Salvar
+    </button>
+  </div>
 </div>
+
+

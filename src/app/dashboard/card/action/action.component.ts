@@ -30,35 +30,30 @@ export class ActionComponent implements OnInit {
 
   callDialogInvestment(item: Startup) {
     this.dialog.open(InvestmentsComponent, {
-      width: '60%',
       data: item
     });
   }
 
   callDialogConcurrence(startup: Startup) {
     this.dialog.open(ConcurrencesComponent, {
-      width: '60%',
       data: startup
     });
   }
 
   callDialogProvision(startup: Startup) {
     this.dialog.open(ProvisionComponent, {
-      width: '60%',
       data: startup
     });
   }
 
   callDialogMonetize(startup: Startup) {
     this.dialog.open(MonetizeComponent, {
-      width: '60%',
       data: startup
     });
   }
 
   callDialogProduct(startup: Startup) {
     this.dialog.open(ProductsComponent, {
-      width: '60%',
       data: startup
     });
   }

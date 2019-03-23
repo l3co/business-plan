@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 mat-dialog-title>Nova Idea</h1>
+  <h1 mat-dialog-title>Nova Idéa</h1>
   <mat-dialog-content>
 
     <mat-form-field color="accent">
@@ -25,11 +25,9 @@
   </mat-dialog-content>
 
   <div mat-dialog-actions>
-    <button mat-button (click)="closeDialog()">Cancelar</button>
+    <button mat-button (click)="closeDialog()">Fechar</button>
     <button mat-button [disabled]="iptIdea.invalid || iptObjective.invalid" class="bt-center" color="accent"
             (click)="saveStartup()">Registrar Idéia
     </button>
   </div>
-
-
 </div>
