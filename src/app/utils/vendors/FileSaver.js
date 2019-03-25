@@ -103,7 +103,7 @@ var saveAs = saveAs || (function(view) {
 						filesaver.readyState = filesaver.INIT;
 						return;
 					}
-					// don't create more object URLs than needed
+					// don't create-business-dialog more object URLs than needed
 					if (!object_url) {
 						object_url = get_URL().createObjectURL(blob);
 					}

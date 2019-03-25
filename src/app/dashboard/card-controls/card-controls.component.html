@@ -1,17 +1,19 @@
-<button
-  mat-mini-fab
-  color="accent"
-  class="card-button"
-  matTooltip="Add Investimento"
-  (click)="callDialogInvestment(startup)">
-  <mat-icon>money_off</mat-icon>
-</button>
+<!--<button-->
+  <!--mat-mini-fab-->
+  <!--color="accent"-->
+  <!--class="card-button"-->
+  <!--matTooltip="Investimento"-->
+  <!--(click)="callDialogInvestment(startup)">-->
+  <!--<mat-icon>money_off</mat-icon>-->
+<!--</button>-->
+
+<l3co-menu-investment [startup]="startup"></l3co-menu-investment>
 
 <button
   mat-mini-fab
   color="accent"
   class="card-button"
-  matTooltip="Add Retorno"
+  matTooltip="Retorno"
   (click)="callDialogProvision(startup)">
   <mat-icon>attach_money</mat-icon>
 </button>
@@ -20,7 +22,7 @@
   mat-mini-fab
   color="accent"
   class="card-button"
-  matTooltip="Add Concorrentes"
+  matTooltip="Concorrentes"
   (click)="callDialogConcurrence(startup)">
   <mat-icon>business</mat-icon>
 </button>
@@ -29,7 +31,7 @@
   mat-mini-fab
   color="accent"
   class="card-button"
-  matTooltip="Add Monetização"
+  matTooltip="Monetização"
   (click)="callDialogMonetize(startup)">
   <mat-icon>monetization_on</mat-icon>
 </button>
@@ -38,7 +40,7 @@
   mat-mini-fab color="accent"
   class="card-button"
   (click)="callDialogProduct(startup)"
-  matTooltip="Add Produto">
+  matTooltip="Produto">
   <mat-icon>apps</mat-icon>
 </button>
 

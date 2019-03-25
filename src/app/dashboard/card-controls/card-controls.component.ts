@@ -1,19 +1,19 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Startup} from '../../../models/startup.models';
-import {DocsService} from '../../../docs.service';
+import {Startup} from '../../models/startup.models';
+import {DocsService} from '../../docs.service';
 import {MatDialog} from '@angular/material';
-import {InvestmentsComponent} from '../../../startup/investments/investments.component';
-import {ConcurrencesComponent} from '../../../startup/concurrences/concurrences.component';
-import {ProvisionComponent} from '../../../startup/provision/provision.component';
-import {MonetizeComponent} from '../../../startup/monetize/monetize.component';
-import {ProductsComponent} from '../../../startup/products/products.component';
+import {CreateInvestmentsDialogComponent} from '../../startup/investments/create-investments-dialog/create-investments-dialog.component';
+import {ConcurrencesComponent} from '../../startup/concurrences/create-concurrences-dialog/concurrences.component';
+import {ProvisionComponent} from '../../startup/provision/create-provision-dialog/provision.component';
+import {MonetizeComponent} from '../../startup/monetize/create-monetize-dialog/monetize.component';
+import {ProductsComponent} from '../../startup/products/create-products-dialog/products.component';
 
 @Component({
   selector: 'l3co-action',
-  templateUrl: './action.component.html',
-  styleUrls: ['./action.component.scss']
+  templateUrl: './card-controls.component.html',
+  styleUrls: ['./card-controls.component.scss']
 })
-export class ActionComponent implements OnInit {
+export class CardControlsComponent implements OnInit {
 
   @Input() startup: Startup;
 
@@ -26,12 +26,6 @@ export class ActionComponent implements OnInit {
 
   exportFile(startup: Startup) {
     this.docs.generate(startup);
-  }
-
-  callDialogInvestment(item: Startup) {
-    this.dialog.open(InvestmentsComponent, {
-      data: item
-    });
   }
 
   callDialogConcurrence(startup: Startup) {

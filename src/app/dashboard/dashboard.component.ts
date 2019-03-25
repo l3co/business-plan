@@ -18,4 +18,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.startup$ = this.service.listAllStartupByUserId();
   }
+
+  totalInvestments(startup: Startup) {
+    return this.service.totalInvestments(startup);
+  }
+
+  totalProvision(startup: Startup) {
+    return this.service.totalProvision(startup);
+  }
 }

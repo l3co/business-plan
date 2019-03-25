@@ -1,0 +1,59 @@
+@media(min-width: 0px) and(max-width: 400px) {
+  .dash-card {
+    float: left;
+    margin: 2px;
+    width: 90%;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media(min-width: 400px) and(max-width: 600px) {
+  .dash-card {
+    float: left;
+    margin: 2px;
+    width: 90%;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media(min-width: 600px) and (max-width: 800px) {
+  .dash-card {
+    float: left;
+    margin: 2px;
+    width: 90%;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media(min-width: 800px) {
+  .dash-card {
+    float: left;
+    margin: 2px;
+    width: 370px;
+  }
+
+  .card-objective, .cart-title {
+    white-space: nowrap;
+    width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
