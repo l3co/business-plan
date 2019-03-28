@@ -22,6 +22,7 @@ import {
   MatSnackBarModule,
   MatTabsModule,
   MatToolbarModule,
+  MatProgressBarModule,
   MatTooltipModule,
   MatTableModule
 } from '@angular/material';
