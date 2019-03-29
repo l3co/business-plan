@@ -10,9 +10,9 @@
     <p class="card-objective">{{startup.objective}}</p>
     <p>Mercado de atuação: {{startup.market}}</p>
     <mat-chip-list>
-      <mat-chip class="custom-ships investment">Investimento
+      <mat-chip class="custom-ships investment">Investimentos
         : {{ totalInvestments(startup) | currency: 'BRL'}}</mat-chip>
-      <mat-chip class="custom-ships provision">Retorno : {{ totalProvision(startup) | currency: 'BRL'}}</mat-chip>
+      <mat-chip class="custom-ships costs">Custos : {{ totalCosts(startup) | currency: 'BRL'}}</mat-chip>
     </mat-chip-list>
   </mat-card-content>
   <mat-card-actions>

@@ -34,16 +34,16 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CardControlsComponent} from './dashboard/card-controls/card-controls.component';
 import {FormsModule} from '@angular/forms';
-import {ProvisionComponent} from './startup/create-provision-dialog/create-provision-dialog/provision.component';
-import {ProductsComponent} from './startup/create-products-dialog/create-products-dialog/products.component';
-import {ConcurrencesComponent} from './startup/create-concurrences-dialog/create-concurrences-dialog/concurrences.component';
-import {MonetizeComponent} from './startup/create-monetize-dialog/create-monetize-dialog/monetize.component';
+import {CostsComponent} from './startup/costs/create-costs-dialog/costs.component';
+import {ProductsComponent} from './startup/products/create-products-dialog/products.component';
+import {ConcurrencesComponent} from './startup/concurrences/create-concurrences-dialog/concurrences.component';
+import {MonetizeComponent} from './startup/monetize/create-monetize-dialog/monetize.component';
 import {CreateInvestmentsDialogComponent} from './startup/investments/create-investments-dialog/create-investments-dialog.component';
 import {HelpComponent} from './help/help.component';
 import {UserComponent} from './user/user.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {MenuInvestmentComponent} from './dashboard/card-controls/menu-investment/menu-investment.component';
-import {MenuProvisionComponent} from './dashboard/card-controls/menu-provision/menu-provision.component';
+import {MenuCostsComponent} from './dashboard/card-controls/menu-costs/menu-costs.component';
 import {MenuConcurrencesComponent} from './dashboard/card-controls/menu-concurrences/menu-concurrences.component';
 import {MenuMonetizeComponent} from './dashboard/card-controls/menu-monetize/menu-monetize.component';
 import {MenuProductsComponent} from './dashboard/card-controls/menu-products/menu-products.component';
@@ -57,7 +57,7 @@ import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component'
     CreateInvestmentsDialogComponent,
     ListInvestmentsDialogComponent,
     ConcurrencesComponent,
-    ProvisionComponent,
+    CostsComponent,
     MonetizeComponent,
     ProductsComponent,
     BusinessComponent,
@@ -69,7 +69,7 @@ import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component'
     DashboardComponent,
     CreateInvestmentsDialogComponent,
     CardControlsComponent,
-    ProvisionComponent,
+    CostsComponent,
     ProductsComponent,
     ConcurrencesComponent,
     MonetizeComponent,
@@ -77,7 +77,7 @@ import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component'
     BusinessComponent,
     UserComponent,
     MenuInvestmentComponent,
-    MenuProvisionComponent,
+    MenuCostsComponent,
     MenuConcurrencesComponent,
     MenuMonetizeComponent,
     MenuProductsComponent,

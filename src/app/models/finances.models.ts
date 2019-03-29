@@ -3,7 +3,7 @@ export interface Investments {
   value: number;
 }
 
-export interface Provision {
+export interface Costs {
   name: string;
   value: number;
 }

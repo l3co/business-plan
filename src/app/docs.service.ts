@@ -36,7 +36,7 @@ export class DocsService {
     doc.createParagraph('\n');
     this.investmentSession(startup, doc);
     doc.createParagraph('\n');
-    this.provisionSession(startup, doc);
+    this.costsSession(startup, doc);
 
 
     const packer = new Packer();
@@ -109,20 +109,20 @@ export class DocsService {
       .addContent(new Paragraph(`R$ ${this.service.totalInvestments(startup).toLocaleString('pt-BR')}`));
   }
 
-  private provisionSession(startup: Startup, doc: Document) {
-    doc.createParagraph('Retorno\n').heading3();
+  private costsSession(startup: Startup, doc: Document) {
+    doc.createParagraph('Custo\n').heading3();
     doc.createParagraph('\n');
-    const monetize = doc.createTable(startup.provision.length + 2, 2);
+    const monetize = doc.createTable(startup.costs.length + 2, 2);
     monetize.getCell(0, 0).addContent(new Paragraph('Nome'));
     monetize.getCell(0, 1).addContent(new Paragraph('Objetivo'));
 
-    startup.provision.forEach(((value, index) => {
+    startup.costs.forEach(((value, index) => {
       const i = index + 1;
       monetize.getCell(i, 0).addContent(new Paragraph(value.name));
       monetize.getCell(i, 1).addContent(new Paragraph(`R$ ${value.value.toLocaleString('pt-BR')}`));
     }));
 
-    monetize.getCell(startup.provision.length + 1, 1)
-      .addContent(new Paragraph(`R$ ${this.service.totalProvision(startup).toLocaleString('pt-BR')}`));
+    monetize.getCell(startup.costs.length + 1, 1)
+      .addContent(new Paragraph(`R$ ${this.service.totalCosts(startup).toLocaleString('pt-BR')}`));
   }
 }

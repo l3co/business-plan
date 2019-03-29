@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     return this.service.totalInvestments(startup);
   }
 
-  totalProvision(startup: Startup) {
-    return this.service.totalProvision(startup);
+  totalCosts(startup: Startup) {
+    return this.service.totalCosts(startup);
   }
 }

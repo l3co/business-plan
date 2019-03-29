@@ -1,21 +1,12 @@
-<!--<button-->
-  <!--mat-mini-fab-->
-  <!--color="accent"-->
-  <!--class="card-button"-->
-  <!--matTooltip="Investimento"-->
-  <!--(click)="callDialogInvestment(startup)">-->
-  <!--<mat-icon>money_off</mat-icon>-->
-<!--</button>-->
-
 <l3co-menu-investment [startup]="startup"></l3co-menu-investment>
 
 <button
   mat-mini-fab
   color="accent"
   class="card-button"
-  matTooltip="Retorno"
-  (click)="callDialogProvision(startup)">
-  <mat-icon>attach_money</mat-icon>
+  matTooltip="Custos"
+  (click)="callDialogCosts(startup)">
+  <mat-icon>money_off</mat-icon>
 </button>
 
 <button

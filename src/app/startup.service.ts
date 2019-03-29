@@ -46,9 +46,8 @@ export class StartupService {
       .reduce((prev, value) => prev + value, 0);
   }
 
-  totalProvision(startup: Startup): number {
-    return startup.provision
-      .map(value => value.value)
+  totalCosts(startup: Startup): number {
+    return startup.costs.map(value => value.value)
       .reduce((prev, value) => prev + value, 0);
   }
 
