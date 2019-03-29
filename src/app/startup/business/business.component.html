@@ -1,33 +1,22 @@
-<div class="container">
-  <h1 mat-dialog-title>Nova Idéa</h1>
-  <mat-dialog-content>
+<l3co-base-dialog
+  [title]="'Nova Idéa'"
+  (action)="action($event)"
+  buttonSave="Salvar Ideia">
+  <mat-form-field color="accent">
+    <input name="idea" matInput required
+           [(ngModel)]="startup.idea" placeholder="Ideia do applicativo">
+  </mat-form-field>
 
-    <mat-form-field color="accent">
-      <input name="idea" matInput required
-             #iptIdea="ngModel"
-             [(ngModel)]="startup.idea"
-             placeholder="Ideia do applicativo">
-    </mat-form-field>
+  <mat-form-field color="accent">
+        <textarea name="objective" matInput required
+                  [(ngModel)]="startup.objective"
+                  placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
+        </textarea>
+  </mat-form-field>
 
-    <mat-form-field color="accent">
-      <textarea name="objective" matInput required
-                [(ngModel)]="startup.objective"
-                #iptObjective="ngModel"
-                placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
-      </textarea>
-    </mat-form-field>
-
-    <mat-form-field color="accent">
-      <mat-select required placeholder="Select" [(ngModel)]="startup.market">
-        <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </mat-dialog-content>
-
-  <div mat-dialog-actions>
-    <button mat-button (click)="closeDialog()">Fechar</button>
-    <button mat-button [disabled]="iptIdea.invalid || iptObjective.invalid" class="bt-center"
-            (click)="saveStartup()">Registrar Idéia
-    </button>
-  </div>
-</div>
+  <mat-form-field color="accent">
+    <mat-select required placeholder="Select" [(ngModel)]="startup.market">
+      <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</l3co-base-dialog>

@@ -3,10 +3,10 @@ import {Startup} from '../../models/startup.models';
 import {DocsService} from '../../docs.service';
 import {MatDialog} from '@angular/material';
 import {CreateInvestmentsDialogComponent} from '../../startup/investments/create-investments-dialog/create-investments-dialog.component';
-import {ConcurrencesComponent} from '../../startup/concurrences/create-concurrences-dialog/concurrences.component';
-import {ProvisionComponent} from '../../startup/provision/create-provision-dialog/provision.component';
-import {MonetizeComponent} from '../../startup/monetize/create-monetize-dialog/monetize.component';
-import {ProductsComponent} from '../../startup/products/create-products-dialog/products.component';
+import {ConcurrencesComponent} from '../../startup/create-concurrences-dialog/create-concurrences-dialog/concurrences.component';
+import {ProvisionComponent} from '../../startup/create-provision-dialog/create-provision-dialog/provision.component';
+import {MonetizeComponent} from '../../startup/create-monetize-dialog/create-monetize-dialog/monetize.component';
+import {ProductsComponent} from '../../startup/create-products-dialog/create-products-dialog/products.component';
 
 @Component({
   selector: 'l3co-action',

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 mat-dialog-title>{{title}}</h1>
+  <mat-dialog-content>
+    <form #formElement=ngForm>
+      <ng-content></ng-content>
+    </form>
+  </mat-dialog-content>
+  <div mat-dialog-actions>
+    <button mat-button (click)="actionEmitter('close')">Fechar</button>
+    <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="actionEmitter('save')">
+      {{buttonSave}}
+    </button>
+  </div>
+</div>

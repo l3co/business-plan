@@ -1,34 +1,18 @@
-<div class="container">
-  <h1 mat-dialog-title>Novo investimento</h1>
-  <mat-dialog-content>
+<l3co-base-dialog
+(action)="action($event)"
+title="Cadastrar investimento"
+[buttonSave]="'Salvar investimento'">
+  <mat-form-field color="accent">
+    <input name="investment" required
+           [(ngModel)]="investment.name"
+           matInput placeholder="Nome do investimento">
+  </mat-form-field>
 
-    <mat-form-field color="accent">
-      <input name="investment" required
-             #iptInvestment='ngModel'
-             [(ngModel)]="investment.name"
-             matInput placeholder="Nome do investimento">
-    </mat-form-field>
-
-    <mat-form-field color="accent">
-      <input type="number" name="value"
-             #iptValue='ngModel' required
-             matInput
-             [(ngModel)]="investment.value"
-             placeholder="Valor do investimento">
-    </mat-form-field>
-
-  </mat-dialog-content>
-
-  <div mat-dialog-actions>
-    <button mat-button (click)="closeDialog()">Fechar</button>
-    <button
-      mat-button
-      [disabled]="iptInvestment.invalid || iptValue.invalid"
-      class="bt-center"
-      (click)="saveInvestment()">
-      Salvar
-    </button>
-  </div>
-</div>
-
+  <mat-form-field color="accent">
+    <input type="number" name="value"
+           required matInput
+           [(ngModel)]="investment.value"
+           placeholder="Valor do investimento">
+  </mat-form-field>
+</l3co-base-dialog>
 

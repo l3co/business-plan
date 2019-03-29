@@ -34,10 +34,10 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CardControlsComponent} from './dashboard/card-controls/card-controls.component';
 import {FormsModule} from '@angular/forms';
-import {ProvisionComponent} from './startup/provision/create-provision-dialog/provision.component';
-import {ProductsComponent} from './startup/products/create-products-dialog/products.component';
-import {ConcurrencesComponent} from './startup/concurrences/create-concurrences-dialog/concurrences.component';
-import {MonetizeComponent} from './startup/monetize/create-monetize-dialog/monetize.component';
+import {ProvisionComponent} from './startup/create-provision-dialog/create-provision-dialog/provision.component';
+import {ProductsComponent} from './startup/create-products-dialog/create-products-dialog/products.component';
+import {ConcurrencesComponent} from './startup/create-concurrences-dialog/create-concurrences-dialog/concurrences.component';
+import {MonetizeComponent} from './startup/create-monetize-dialog/create-monetize-dialog/monetize.component';
 import {CreateInvestmentsDialogComponent} from './startup/investments/create-investments-dialog/create-investments-dialog.component';
 import {HelpComponent} from './help/help.component';
 import {UserComponent} from './user/user.component';
@@ -49,6 +49,8 @@ import {MenuMonetizeComponent} from './dashboard/card-controls/menu-monetize/men
 import {MenuProductsComponent} from './dashboard/card-controls/menu-products/menu-products.component';
 import {BusinessComponent} from './startup/business/business.component';
 import {ListInvestmentsDialogComponent} from './startup/investments/list-investments-dialog/list-investments-dialog.component';
+import { ActionButtonComponent } from './shared/action-button/action-button.component';
+import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component';
 
 @NgModule({
   entryComponents: [
@@ -79,7 +81,9 @@ import {ListInvestmentsDialogComponent} from './startup/investments/list-investm
     MenuConcurrencesComponent,
     MenuMonetizeComponent,
     MenuProductsComponent,
-    ListInvestmentsDialogComponent
+    ListInvestmentsDialogComponent,
+    ActionButtonComponent,
+    BaseDialogComponent
   ],
   imports: [
     BrowserModule,

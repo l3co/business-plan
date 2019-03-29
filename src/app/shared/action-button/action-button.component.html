@@ -1,0 +1,22 @@
+<button
+  mat-mini-fab
+  color="accent"
+  class="card-button"
+  matTooltip="{{toolTip}}"
+  [matMenuTriggerFor]="menuInvestment"
+  [matMenuTriggerData]="{startupAction: startup}">
+  <mat-icon>{{icon}}</mat-icon>
+</button>
+
+<mat-menu #menuInvestment="matMenu" overlapTrigger="false">
+  <ng-template matMenuContent let-task="startupAction">
+    <button mat-menu-item (click)="createEvent()">
+      <mat-icon>add</mat-icon>
+      <span>{{createButton}}</span>
+    </button>
+    <button mat-menu-item (click)="listEvent()">
+      <mat-icon>list</mat-icon>
+      <span>{{listButton}}</span>
+    </button>
+  </ng-template>
+</mat-menu>

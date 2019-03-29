@@ -1,22 +1,9 @@
-<button
-  mat-mini-fab
-  color="accent"
-  class="card-button"
-  matTooltip="Investimento"
-  [matMenuTriggerFor]="menuInvestment"
-  [matMenuTriggerData]="{startupAction: startup}">
-  <mat-icon>money_off</mat-icon>
-</button>
-
-<mat-menu #menuInvestment="matMenu" overlapTrigger="false">
-  <ng-template matMenuContent let-task="startupAction">
-    <button mat-menu-item (click)="createInvestment(startup)">
-      <mat-icon>add</mat-icon>
-      <span>Criar</span>
-    </button>
-    <button mat-menu-item (click)="listInvestment(startup)">
-      <mat-icon>list</mat-icon>
-      <span>Listar</span>
-    </button>
-  </ng-template>
-</mat-menu>
+<l3co-action-button
+  (create)="createInvestment($event)"
+  (list)="listInvestment($event)"
+  [icon]="'money_off'"
+  [toolTip]="'Investimento'"
+  [startup]="startup"
+  listButton="Listar investimentos"
+  createButton="Criar investimentos">
+</l3co-action-button>

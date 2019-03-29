@@ -6,8 +6,7 @@ import {ListInvestmentsDialogComponent} from '../../../startup/investments/list-
 
 @Component({
   selector: 'l3co-menu-investment',
-  templateUrl: './menu-investment.component.html',
-  styleUrls: ['./menu-investment.component.scss']
+  templateUrl: './menu-investment.component.html'
 })
 export class MenuInvestmentComponent implements OnInit {
 

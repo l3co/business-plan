@@ -3,7 +3,7 @@ import {Investments, Provision} from './finances.models';
 import {Products} from './products.models';
 import {Monetize} from './monetize.models';
 
-export interface Startup {
+interface Startup {
   uid: string;
   idea: string;
   objective: string;
@@ -15,3 +15,20 @@ export interface Startup {
   products: Products[];
   user_id: string;
 }
+
+function builderStartup(): Startup {
+  return {
+    uid: '',
+    idea: '',
+    objective: '',
+    market: '',
+    monetize: [],
+    provision: [],
+    investments: [],
+    products: [],
+    concurrences: [],
+    user_id: ''
+  };
+}
+
+export {Startup, builderStartup};
