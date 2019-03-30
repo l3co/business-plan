@@ -1,5 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
+
+import {registerLocaleData} from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -55,6 +58,8 @@ import {ListConcurrencesDialogComponent} from './startup/concurrences/list-concu
 import {ListCostsDialogComponent} from './startup/costs/list-costs-dialog/list-costs-dialog.component';
 import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dialog/list-monetize-dialog.component';
 import {ListProductsDialogComponent} from './startup/products/list-products-dialog/list-products-dialog.component';
+
+registerLocaleData(localePt);
 
 @NgModule({
   entryComponents: [
@@ -123,7 +128,7 @@ import {ListProductsDialogComponent} from './startup/products/list-products-dial
     MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
