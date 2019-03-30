@@ -3,24 +3,26 @@ import {Costs} from '../../../models/finances.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
+import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
 
 @Component({
   selector: 'l3co-costs',
   templateUrl: './costs.component.html'
 })
-export class CostsComponent implements OnInit {
+export class CostsComponent extends BaseDialog implements OnInit {
 
   costs: Costs = {name: '', value: 0.0};
 
   constructor(private service: StartupService,
               private dialogRef: MatDialogRef<CostsComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
+    super();
   }
 
   ngOnInit() {
   }
 
-  saveCosts() {
+  save() {
     this.data
       .costs.push(this.costs);
 
@@ -29,7 +31,7 @@ export class CostsComponent implements OnInit {
       .then(() => this.dialogRef.close());
   }
 
-  closeDialog() {
+  close() {
     this.dialogRef.close();
   }
 }

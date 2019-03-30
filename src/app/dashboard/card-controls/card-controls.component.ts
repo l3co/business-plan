@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Startup} from '../../models/startup.models';
 import {DocsService} from '../../docs.service';
 import {MatDialog} from '@angular/material';
-import {CreateInvestmentsDialogComponent} from '../../startup/investments/create-investments-dialog/create-investments-dialog.component';
 import {ConcurrencesComponent} from '../../startup/concurrences/create-concurrences-dialog/concurrences.component';
 import {CostsComponent} from '../../startup/costs/create-costs-dialog/costs.component';
 import {MonetizeComponent} from '../../startup/monetize/create-monetize-dialog/monetize.component';
@@ -10,8 +9,7 @@ import {ProductsComponent} from '../../startup/products/create-products-dialog/p
 
 @Component({
   selector: 'l3co-action',
-  templateUrl: './card-controls.component.html',
-  styleUrls: ['./card-controls.component.scss']
+  templateUrl: './card-controls.component.html'
 })
 export class CardControlsComponent implements OnInit {
 

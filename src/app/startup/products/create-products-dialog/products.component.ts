@@ -3,34 +3,33 @@ import {Products} from '../../../models/products.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
+import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
 
 @Component({
   selector: 'l3co-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  templateUrl: './products.component.html'
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent extends BaseDialog implements OnInit {
 
   product: Products = {name: '', objective: ''};
 
   constructor(private service: StartupService,
               private dialogRef: MatDialogRef<ProductsComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
+    super();
   }
 
   ngOnInit() {
   }
 
-  saveProduct() {
-    this.data
-      .products.push(this.product);
+  save() {
+    this.data.products.push(this.product);
 
-    this.service
-      .update(this.data)
+    this.service.update(this.data)
       .then(() => this.dialogRef.close());
   }
 
-  closeDialog() {
+  close() {
     this.dialogRef.close();
   }
 }

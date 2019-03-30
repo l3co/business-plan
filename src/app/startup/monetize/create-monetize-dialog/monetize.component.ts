@@ -3,34 +3,33 @@ import {Monetize} from '../../../models/monetize.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
+import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
 
 @Component({
   selector: 'l3co-monetize',
-  templateUrl: './monetize.component.html',
-  styleUrls: ['./monetize.component.scss']
+  templateUrl: './monetize.component.html'
 })
-export class MonetizeComponent implements OnInit {
+export class MonetizeComponent extends BaseDialog implements OnInit {
 
   monetize: Monetize = {description: '', note: ''};
 
   constructor(private service: StartupService,
               private dialogRef: MatDialogRef<MonetizeComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
+    super();
   }
 
   ngOnInit() {
   }
 
-  createMonetize() {
-    this.data
-      .monetize.push(this.monetize);
+  save() {
+    this.data.monetize.push(this.monetize);
 
-    this.service
-      .update(this.data)
+    this.service.update(this.data)
       .then(() => this.dialogRef.close());
   }
 
-  closeDialog() {
+  close() {
     this.dialogRef.close();
   }
 }

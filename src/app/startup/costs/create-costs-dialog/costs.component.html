@@ -1,33 +1,18 @@
-<div class="container">
+<l3co-base-dialog
+  [title]="'Custos'"
+  (action)="action($event)"
+  buttonSave="Salvar custo">
 
-  <div class="container">
-    <h1 mat-dialog-title>Custos</h1>
-    <mat-dialog-content>
+  <mat-form-field color="accent">
+    <input name="costs"required
+           [(ngModel)]="costs.name"
+           matInput placeholder="Nome do custo">
+  </mat-form-field>
 
-      <mat-form-field color="accent">
-        <input name="costs"
-               #iptCosts='ngModel'
-               required
-               [(ngModel)]="costs.name"
-               matInput placeholder="Nome do custo">
-      </mat-form-field>
-
-      <mat-form-field color="accent">
-        <input type="number"
-               name="objective" matInput
-               #iptValue='ngModel' required
-               [(ngModel)]="costs.value"
-               placeholder="Custo R$">
-      </mat-form-field>
-    </mat-dialog-content>
-
-    <div mat-dialog-actions>
-      <button mat-button (click)="closeDialog()">Fechar</button>
-      <button mat-button
-              [disabled]="iptValue.invalid || iptCosts.invalid"
-              class="bt-center"
-              (click)="saveCosts()">Adicionar
-      </button>
-    </div>
-  </div>
-</div>
+  <mat-form-field color="accent">
+    <input type="number" name="value"
+           matInput required
+           [(ngModel)]="costs.value"
+           placeholder="Custo R$">
+  </mat-form-field>
+</l3co-base-dialog>

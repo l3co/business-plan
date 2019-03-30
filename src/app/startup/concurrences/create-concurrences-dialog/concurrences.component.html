@@ -1,28 +1,18 @@
-<div class="container">
-  <h1 mat-dialog-title>Adicionar concorrentes</h1>
-  <mat-dialog-content>
+<l3co-base-dialog
+  [title]="'Concorrentes'"
+  (action)="action($event)"
+  buttonSave="Salvar Concorrente">
 
-    <mat-form-field color="accent">
-      <input name="name"
-             #iptName='ngModel' required
-             [(ngModel)]="concurrences.name"
-             matInput placeholder="Nome do concorrente">
-    </mat-form-field>
+  <mat-form-field color="accent">
+    <input name="name" required
+           [(ngModel)]="concurrences.name"
+           matInput placeholder="Nome do concorrente">
+  </mat-form-field>
 
-    <mat-form-field color="accent">
-      <input name="objective" matInput
-             #iptSite='ngModel' required
-             [(ngModel)]="concurrences.site"
-             placeholder="Site do concorrente">
-    </mat-form-field>
+  <mat-form-field color="accent">
+    <input name="objective" matInput required
+           [(ngModel)]="concurrences.site"
+           placeholder="Site do concorrente">
+  </mat-form-field>
 
-  </mat-dialog-content>
-
-  <div mat-dialog-actions>
-    <button mat-button (click)="closeDialog()">Fechar</button>
-    <button mat-button
-            [disabled]="iptName.invalid || iptSite.invalid"
-            class="bt-center" (click)="saveConcurrences()">Adicionar
-    </button>
-  </div>
-</div>
+</l3co-base-dialog>
