@@ -32,4 +32,8 @@ export class ListInvestmentsDialogComponent implements OnInit {
       || this.data.investments.length === undefined
       || this.data.investments.length === 0;
   }
+
+  close() {
+    this.dialogRef.close();
+  }
 }

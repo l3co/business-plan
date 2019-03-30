@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 mat-dialog-title>Lista de Investimentos</h1>
+  <h1 mat-dialog-title>Investimentos Realizados</h1>
   <mat-dialog-content>
 
     <p *ngIf="investmentIsEmpty()">Não há investimentos salvos!</p>
@@ -32,8 +32,11 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-
   </mat-dialog-content>
+
+  <br>
+  <button mat-button (click)="close()">Fechar</button>
+
 </div>
 
 
