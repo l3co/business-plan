@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://unpkg.com/purecss@1.0.0/build/pure-min.css');
+
 
 html, body {
   height: 100%;
@@ -60,5 +62,3 @@ body {
 mat-form-field {
   width: 100%;
 }
-
-

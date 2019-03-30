@@ -1,3 +1,9 @@
-<p>
-  menu-costs works!
-</p>
+<l3co-action-button
+  (create)="createCosts($event)"
+  (list)="listCosts($event)"
+  [icon]="'money_off'"
+  [toolTip]="'Custos'"
+  [startup]="startup"
+  listButton="Listar Custos"
+  createButton="Criar Custo">
+</l3co-action-button>

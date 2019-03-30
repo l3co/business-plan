@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 mat-dialog-title>Formas de monetização</h1>
+  <mat-dialog-content>
+    <p *ngIf="monetizeIsEmpty()">Não há monetização salvos!</p>
+    <table *ngIf="!monetizeIsEmpty()" class="pure-table pure-table-horizontal">
+      <thead>
+      <tr>
+        <th>ação</th>
+        <th>descrição</th>
+        <th>notas</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let monetize of data.monetize">
+        <td>
+          <button mat-button (click)="removeCosts(monetize)">Remover</button>
+        </td>
+        <td>{{monetize.description}}</td>
+        <td>{{monetize.note}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-dialog-content>
+  <br>
+  <button mat-button (click)="close()">Fechar</button>
+</div>

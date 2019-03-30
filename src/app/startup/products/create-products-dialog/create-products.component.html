@@ -1,0 +1,18 @@
+<l3co-base-dialog
+  [title]="'Produtos'"
+  (action)="action($event)"
+  buttonSave="Salvar custo">
+
+  <mat-form-field color="accent">
+    <input name="name" required
+           [(ngModel)]="product.name"
+           matInput placeholder="Nome do produto">
+  </mat-form-field>
+
+  <mat-form-field color="accent">
+    <textarea name="objective" matInput required
+              [(ngModel)]="product.objective"
+              placeholder="Objetivo do produto informado">
+    </textarea>
+  </mat-form-field>
+</l3co-base-dialog>

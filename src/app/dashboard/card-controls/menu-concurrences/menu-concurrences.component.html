@@ -1,3 +1,9 @@
-<p>
-  menu-concurrences works!
-</p>
+<l3co-action-button
+  (create)="createConcurrences($event)"
+  (list)="listConcurrences($event)"
+  [icon]="'business'"
+  [toolTip]="'Concorrentes'"
+  [startup]="startup"
+  listButton="Listar Concorrentes"
+  createButton="Criar Concorrentes">
+</l3co-action-button>

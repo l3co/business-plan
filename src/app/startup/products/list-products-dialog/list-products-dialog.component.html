@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 mat-dialog-title>Produtos</h1>
+  <mat-dialog-content>
+    <p *ngIf="productsIsEmpty()">Não há produtos salvos!</p>
+    <table *ngIf="!productsIsEmpty()" class="pure-table pure-table-horizontal">
+      <thead>
+      <tr>
+        <th>action</th>
+        <th>nome</th>
+        <th>objetivo</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of data.products">
+        <td>
+          <button mat-button (click)="removeProducts(product)">Remover</button>
+        </td>
+        <td>{{product.name}}</td>
+        <td>{{product.objective}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-dialog-content>
+  <br>
+  <button mat-button (click)="close()">Fechar</button>
+</div>

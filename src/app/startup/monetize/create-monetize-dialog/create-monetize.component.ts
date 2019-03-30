@@ -6,15 +6,15 @@ import {Startup} from '../../../models/startup.models';
 import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
-  selector: 'l3co-monetize',
-  templateUrl: './monetize.component.html'
+  selector: 'l3co-create-monetize',
+  templateUrl: './create-monetize.component.html'
 })
-export class MonetizeComponent extends CreateDialog implements OnInit {
+export class CreateMonetizeComponent extends CreateDialog implements OnInit {
 
   monetize: Monetize = {description: '', note: ''};
 
   constructor(private service: StartupService,
-              private dialogRef: MatDialogRef<MonetizeComponent>,
+              private dialogRef: MatDialogRef<CreateMonetizeComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
     super();
   }

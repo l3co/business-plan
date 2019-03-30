@@ -33,10 +33,10 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CardControlsComponent} from './dashboard/card-controls/card-controls.component';
 import {FormsModule} from '@angular/forms';
-import {CostsComponent} from './startup/costs/create-costs-dialog/costs.component';
-import {ProductsComponent} from './startup/products/create-products-dialog/products.component';
-import {ConcurrencesComponent} from './startup/concurrences/create-concurrences-dialog/concurrences.component';
-import {MonetizeComponent} from './startup/monetize/create-monetize-dialog/monetize.component';
+import {CreateCostsComponent} from './startup/costs/create-costs-dialog/create-costs.component';
+import {CreateProductsComponent} from './startup/products/create-products-dialog/create-products.component';
+import {CreateConcurrencesComponent} from './startup/concurrences/create-concurrences-dialog/create-concurrences.component';
+import {CreateMonetizeComponent} from './startup/monetize/create-monetize-dialog/create-monetize.component';
 import {CreateInvestmentsDialogComponent} from './startup/investments/create-investments-dialog/create-investments-dialog.component';
 import {HelpComponent} from './help/help.component';
 import {UserComponent} from './user/user.component';
@@ -50,15 +50,23 @@ import {BusinessComponent} from './startup/business/business.component';
 import {ListInvestmentsDialogComponent} from './startup/investments/list-investments-dialog/list-investments-dialog.component';
 import {ActionButtonComponent} from './shared/action-button/action-button.component';
 import {CreateDialogComponent} from './shared/create-dialog/create-dialog.component';
+import {ListConcurrencesDialogComponent} from './startup/concurrences/list-concurrences-dialog/list-concurrences-dialog.component';
+import {ListCostsDialogComponent} from './startup/costs/list-costs-dialog/list-costs-dialog.component';
+import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dialog/list-monetize-dialog.component';
+import {ListProductsDialogComponent} from './startup/products/list-products-dialog/list-products-dialog.component';
 
 @NgModule({
   entryComponents: [
     CreateInvestmentsDialogComponent,
     ListInvestmentsDialogComponent,
-    ConcurrencesComponent,
-    CostsComponent,
-    MonetizeComponent,
-    ProductsComponent,
+    ListConcurrencesDialogComponent,
+    ListCostsDialogComponent,
+    ListProductsDialogComponent,
+    ListMonetizeDialogComponent,
+    CreateConcurrencesComponent,
+    CreateCostsComponent,
+    CreateMonetizeComponent,
+    CreateProductsComponent,
     BusinessComponent,
     HelpComponent
   ],
@@ -68,10 +76,10 @@ import {CreateDialogComponent} from './shared/create-dialog/create-dialog.compon
     DashboardComponent,
     CreateInvestmentsDialogComponent,
     CardControlsComponent,
-    CostsComponent,
-    ProductsComponent,
-    ConcurrencesComponent,
-    MonetizeComponent,
+    CreateCostsComponent,
+    CreateProductsComponent,
+    CreateConcurrencesComponent,
+    CreateMonetizeComponent,
     HelpComponent,
     BusinessComponent,
     UserComponent,
@@ -81,6 +89,10 @@ import {CreateDialogComponent} from './shared/create-dialog/create-dialog.compon
     MenuMonetizeComponent,
     MenuProductsComponent,
     ListInvestmentsDialogComponent,
+    ListConcurrencesDialogComponent,
+    ListMonetizeDialogComponent,
+    ListProductsDialogComponent,
+    ListCostsDialogComponent,
     ActionButtonComponent,
     CreateDialogComponent
   ],

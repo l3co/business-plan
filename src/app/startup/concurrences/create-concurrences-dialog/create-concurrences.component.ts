@@ -1,20 +1,20 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Costs} from '../../../models/finances.models';
+import {Concurrences} from '../../../models/concurrences.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
 import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
-  selector: 'l3co-costs',
-  templateUrl: './costs.component.html'
+  selector: 'l3co-create-concurrences',
+  templateUrl: './create-concurrences.component.html'
 })
-export class CostsComponent extends CreateDialog implements OnInit {
+export class CreateConcurrencesComponent extends CreateDialog implements OnInit {
 
-  costs: Costs = {name: '', value: 0.0};
+  concurrences: Concurrences = {name: '', site: ''};
 
   constructor(private service: StartupService,
-              private dialogRef: MatDialogRef<CostsComponent>,
+              private dialogRef: MatDialogRef<CreateConcurrencesComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
     super();
   }
@@ -24,7 +24,7 @@ export class CostsComponent extends CreateDialog implements OnInit {
 
   save() {
     this.data
-      .costs.push(this.costs);
+      .concurrences.push(this.concurrences);
 
     this.service
       .update(this.data)

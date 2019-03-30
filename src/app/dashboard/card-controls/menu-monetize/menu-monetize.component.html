@@ -1,3 +1,9 @@
-<p>
-  menu-monetize works!
-</p>
+<l3co-action-button
+  (create)="createMonetize($event)"
+  (list)="listMonetize($event)"
+  [icon]="'monetization_on'"
+  [toolTip]="'Monetização'"
+  [startup]="startup"
+  listButton="Listar Monetização"
+  createButton="Criar Monetização">
+</l3co-action-button>

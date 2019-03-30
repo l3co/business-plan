@@ -1,3 +1,17 @@
-<p>
-  menu-products works!
-</p>
+<l3co-action-button
+  (create)="createProduct($event)"
+  (list)="listProduct($event)"
+  [icon]="'apps'"
+  [toolTip]="'Produtos'"
+  [startup]="startup"
+  listButton="Listar Produtos"
+  createButton="Criar Produtos">
+</l3co-action-button>
+
+<!--<button-->
+<!--  mat-mini-fab color="accent"-->
+<!--  class="card-button"-->
+<!--  (click)="callDialogProduct(startup)"-->
+<!--  matTooltip="Produto">-->
+<!--  <mat-icon>apps</mat-icon>-->
+<!--</button>-->

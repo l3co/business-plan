@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 mat-dialog-title>Concorrentes</h1>
+  <mat-dialog-content>
+    <p *ngIf="concurrencesIsEmpty()">Não há concorrentes salvos!</p>
+    <table *ngIf="!concurrencesIsEmpty()" class="pure-table pure-table-horizontal">
+      <thead>
+      <tr>
+        <th>action</th>
+        <th>name</th>
+        <th>site</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let concurrence of data.concurrences">
+        <td>
+          <button mat-button (click)="removeConcurrences(concurrence)">Remover</button>
+        </td>
+        <td>{{concurrence.name}}</td>
+        <td>{{concurrence.site}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-dialog-content>
+  <br>
+  <button mat-button (click)="close()">Fechar</button>
+</div>

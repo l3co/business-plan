@@ -1,20 +1,20 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Concurrences} from '../../../models/concurrences.models';
+import {Products} from '../../../models/products.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
 import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
-  selector: 'l3co-concurrences',
-  templateUrl: './concurrences.component.html'
+  selector: 'l3co-create-products',
+  templateUrl: './create-products.component.html'
 })
-export class ConcurrencesComponent extends CreateDialog implements OnInit {
+export class CreateProductsComponent extends CreateDialog implements OnInit {
 
-  concurrences: Concurrences = {name: '', site: ''};
+  product: Products = {name: '', objective: ''};
 
   constructor(private service: StartupService,
-              private dialogRef: MatDialogRef<ConcurrencesComponent>,
+              private dialogRef: MatDialogRef<CreateProductsComponent>,
               @Inject(MAT_DIALOG_DATA) private data: Startup) {
     super();
   }
@@ -23,11 +23,9 @@ export class ConcurrencesComponent extends CreateDialog implements OnInit {
   }
 
   save() {
-    this.data
-      .concurrences.push(this.concurrences);
+    this.data.products.push(this.product);
 
-    this.service
-      .update(this.data)
+    this.service.update(this.data)
       .then(() => this.dialogRef.close());
   }
 
