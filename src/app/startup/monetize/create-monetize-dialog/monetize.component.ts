@@ -3,13 +3,13 @@ import {Monetize} from '../../../models/monetize.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
-import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
+import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
   selector: 'l3co-monetize',
   templateUrl: './monetize.component.html'
 })
-export class MonetizeComponent extends BaseDialog implements OnInit {
+export class MonetizeComponent extends CreateDialog implements OnInit {
 
   monetize: Monetize = {description: '', note: ''};
 

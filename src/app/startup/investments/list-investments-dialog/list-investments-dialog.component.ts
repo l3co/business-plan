@@ -6,8 +6,7 @@ import {Investments} from '../../../models/finances.models';
 
 @Component({
   selector: 'l3co-list-investments-dialog',
-  templateUrl: './list-investments-dialog.component.html',
-  styleUrls: ['./list-investments-dialog.component.scss']
+  templateUrl: './list-investments-dialog.component.html'
 })
 export class ListInvestmentsDialogComponent implements OnInit {
 
@@ -22,7 +21,6 @@ export class ListInvestmentsDialogComponent implements OnInit {
   }
 
   removeInvestment(investment: Investments) {
-    // const items = this.data.investments.splice()
     const index = this.data.investments.map(value => value.name).indexOf(investment.name);
     this.data.investments.splice(index, 1);
     this.service.update(this.data).then(

@@ -1,4 +1,4 @@
-export abstract class BaseDialog {
+export abstract class CreateDialog {
   action(action: string) {
     if (action === 'close') {
       this.close();

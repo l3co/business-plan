@@ -3,13 +3,13 @@ import {Concurrences} from '../../../models/concurrences.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
-import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
+import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
   selector: 'l3co-concurrences',
   templateUrl: './concurrences.component.html'
 })
-export class ConcurrencesComponent extends BaseDialog implements OnInit {
+export class ConcurrencesComponent extends CreateDialog implements OnInit {
 
   concurrences: Concurrences = {name: '', site: ''};
 

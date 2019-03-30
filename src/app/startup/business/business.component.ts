@@ -3,13 +3,13 @@ import {StartupService} from '../../startup.service';
 import {builderStartup, Startup} from '../../models/startup.models';
 import {MatDialogRef} from '@angular/material';
 import {Category} from '../../models/market.models';
-import {BaseDialog} from '../../shared/base-dialog/base.dialog';
+import {CreateDialog} from '../../shared/create-dialog/create.dialog';
 
 @Component({
   selector: 'l3co-business',
   templateUrl: './business.component.html'
 })
-export class BusinessComponent extends BaseDialog implements OnInit {
+export class BusinessComponent extends CreateDialog implements OnInit {
 
   startup: Startup = builderStartup();
 

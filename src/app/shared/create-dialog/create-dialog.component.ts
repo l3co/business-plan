@@ -2,9 +2,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'l3co-base-dialog',
-  templateUrl: './base-dialog.component.html'
+  templateUrl: './create-dialog.component.html'
 })
-export class BaseDialogComponent implements OnInit {
+export class CreateDialogComponent implements OnInit {
 
   @Input() title: string;
   @Input() buttonSave: string;

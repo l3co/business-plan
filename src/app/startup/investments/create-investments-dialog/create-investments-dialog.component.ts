@@ -3,13 +3,13 @@ import {Startup} from '../../../models/startup.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Investments} from '../../../models/finances.models';
-import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
+import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
   selector: 'l3co-investments',
   templateUrl: './create-investments-dialog.component.html'
 })
-export class CreateInvestmentsDialogComponent extends BaseDialog implements OnInit {
+export class CreateInvestmentsDialogComponent extends CreateDialog implements OnInit {
 
   investment: Investments = {name: '', value: 0.0};
 

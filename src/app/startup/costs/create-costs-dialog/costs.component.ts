@@ -3,13 +3,13 @@ import {Costs} from '../../../models/finances.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Startup} from '../../../models/startup.models';
-import {BaseDialog} from '../../../shared/base-dialog/base.dialog';
+import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
 
 @Component({
   selector: 'l3co-costs',
   templateUrl: './costs.component.html'
 })
-export class CostsComponent extends BaseDialog implements OnInit {
+export class CostsComponent extends CreateDialog implements OnInit {
 
   costs: Costs = {name: '', value: 0.0};
 

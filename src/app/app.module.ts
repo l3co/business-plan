@@ -20,11 +20,10 @@ import {
   MatMenuModule,
   MatSelectModule,
   MatSnackBarModule,
+  MatTableModule,
   MatTabsModule,
   MatToolbarModule,
-  MatProgressBarModule,
-  MatTooltipModule,
-  MatTableModule
+  MatTooltipModule
 } from '@angular/material';
 
 
@@ -49,8 +48,8 @@ import {MenuMonetizeComponent} from './dashboard/card-controls/menu-monetize/men
 import {MenuProductsComponent} from './dashboard/card-controls/menu-products/menu-products.component';
 import {BusinessComponent} from './startup/business/business.component';
 import {ListInvestmentsDialogComponent} from './startup/investments/list-investments-dialog/list-investments-dialog.component';
-import { ActionButtonComponent } from './shared/action-button/action-button.component';
-import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component';
+import {ActionButtonComponent} from './shared/action-button/action-button.component';
+import {CreateDialogComponent} from './shared/create-dialog/create-dialog.component';
 
 @NgModule({
   entryComponents: [
@@ -83,7 +82,7 @@ import { BaseDialogComponent } from './shared/base-dialog/base-dialog.component'
     MenuProductsComponent,
     ListInvestmentsDialogComponent,
     ActionButtonComponent,
-    BaseDialogComponent
+    CreateDialogComponent
   ],
   imports: [
     BrowserModule,
