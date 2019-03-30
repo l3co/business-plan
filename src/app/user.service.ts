@@ -36,7 +36,8 @@ export class UserService {
     return localStorage.getItem('user_id');
   }
 
-  authentication(user: User) {
+  authentication(user: User): boolean {
+    let hasUser = false;
     this.db
       .collection<User>('users',
         ref => ref.where('mail', '==', user.mail)
@@ -45,9 +46,11 @@ export class UserService {
       .subscribe(value => {
           if (this.checkResultValue(value)) {
             localStorage.setItem('user_id', value[0].id);
+            hasUser = true;
           }
         }
       );
+    return hasUser;
   }
 
   private checkResultValue(value) {

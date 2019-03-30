@@ -12,6 +12,8 @@ export class UserComponent implements OnInit {
 
   user: User = {id: '', name: '', mail: '', password: ''};
 
+  hasError = false;
+
   singUpStatus = false;
 
   constructor(private snackBar: MatSnackBar, private service: UserService) {
@@ -36,12 +38,10 @@ export class UserComponent implements OnInit {
   }
 
   login() {
-
     if (this.singUpStatus) {
       this.deactivateLogout();
-      return;
     } else {
-      this.service.authentication(this.user);
+      this.hasError = !this.service.authentication(this.user);
     }
   }
 

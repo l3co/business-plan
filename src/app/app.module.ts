@@ -9,6 +9,7 @@ import {HeaderComponent} from './header/header.component';
 import {MatChipsModule} from '@angular/material/chips';
 
 import {
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatDialogModule,
@@ -117,6 +118,7 @@ import {ListProductsDialogComponent} from './startup/products/list-products-dial
     MatInputModule,
     MatDialogModule,
     MatTooltipModule,
+    MatBadgeModule,
     FormsModule,
     MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})

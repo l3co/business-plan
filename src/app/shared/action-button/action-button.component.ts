@@ -12,6 +12,7 @@ export class ActionButtonComponent implements OnInit {
   @Input() listButton: string;
   @Input() startup: Startup;
   @Input() icon: string;
+  @Input() quantity: number;
 
   @Output() list: EventEmitter<Startup> = new EventEmitter();
   @Output() create: EventEmitter<Startup> = new EventEmitter();

@@ -5,8 +5,7 @@ import {Startup} from '../models/startup.models';
 
 @Component({
   selector: 'l3co-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
 
