@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from './user.service';
+import {UserService} from './user/user.service';
 import {HelpComponent} from './help/help.component';
 import {MatDialog} from '@angular/material';
 import {BusinessComponent} from './startup/business/business.component';
@@ -31,6 +31,6 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
-    this.service.logout();
+    return this.service.doLogout();
   }
 }

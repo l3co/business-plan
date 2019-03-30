@@ -1,46 +1,26 @@
 <div class="container">
   <div style="width: 50%; margin: 0 auto;">
-    <mat-card-title>Usuário</mat-card-title>
-    <p class="mat-error" *ngIf="hasError">
-      Erro durante a autenticação do usuário
-    </p>
+    <h1>Entrar com</h1>
     <mat-card-content>
-      <mat-form-field color="accent" *ngIf="singUpStatus">
-        <input name="name" type="text" [(ngModel)]="user.name" required matInput placeholder="Seu nome">
-      </mat-form-field>
+      <button mat-mini-fab (click)="tryGoogleLogin()" color="accent" class="social-btn">
+        <img src="../../assets/img/google.png" class="social">
+      </button>
 
-      <mat-form-field color="accent">
-        <input name="mail" type="email" [(ngModel)]="user.mail" #iptMail="ngModel" required matInput
-               placeholder="Digite seu email">
-      </mat-form-field>
+      <button mat-mini-fab color="accent" (click)="tryFacebookLogin()" class="social-btn">
+        <img src="../../assets/img/facebook.png" class="social">
+      </button>
 
-      <mat-form-field color="accent">
-        <input type="password" name="password" #iptPass="ngModel" required [(ngModel)]="user.password" matInput
-               placeholder="Senha">
-      </mat-form-field>
+      <button mat-mini-fab color="accent" (click)="tryGithubLogin()" class="social-btn">
+        <img src="../../assets/img/github.png" class="social">
+      </button>
+
     </mat-card-content>
-    <mat-card-actions>
 
-      <button mat-button
-              *ngIf="!singUpStatus"
-              [disabled]="iptMail.invalid || iptPass.invalid"
-              class="bt-center" color="accent" (click)="login()">Login
-      </button>
-
-      <button *ngIf="!singUpStatus" mat-button class="bt-center" color="accent" (click)="activateLogout()">Registrar
-        usuário
-      </button>
-
-      <button *ngIf="singUpStatus" mat-button class="bt-center" color="accent" (click)="deactivateLogout()">Voltar
-      </button>
-
-      <button mat-button
-              *ngIf="singUpStatus"
-              [disabled]="iptMail.invalid || iptPass.invalid"
-              class="bt-center" color="accent" (click)="singUp()">
-        Salvar
-      </button>
-
-    </mat-card-actions>
+    <h3>Bem vindo ao Business Plan</h3>
+    <h4>Está ferramenta tem por objetivo ajudar usuários que desejam fazer seus planejamentos de negócio.</h4>
+    <h5>Desenvolvida por <a href="https://www.linkedin.com/in/le-co/" style="color: white" target="_blank">leco</a>
+      e gerada a partir de conseito explicados no livro Plano de Negócios com Canvas (José Dornelas).</h5>
   </div>
 </div>
+
+

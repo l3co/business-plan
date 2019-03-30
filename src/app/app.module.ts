@@ -58,8 +58,10 @@ import {ListConcurrencesDialogComponent} from './startup/concurrences/list-concu
 import {ListCostsDialogComponent} from './startup/costs/list-costs-dialog/list-costs-dialog.component';
 import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dialog/list-monetize-dialog.component';
 import {ListProductsDialogComponent} from './startup/products/list-products-dialog/list-products-dialog.component';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 registerLocaleData(localePt);
+
 
 @NgModule({
   entryComponents: [
@@ -112,6 +114,7 @@ registerLocaleData(localePt);
     MatMenuModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     MatButtonModule,
     MatGridListModule,
     MatSelectModule,
@@ -128,7 +131,12 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

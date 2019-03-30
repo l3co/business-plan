@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../models/user.models';
-import {UserService} from '../user.service';
-import {MatSnackBar} from '@angular/material';
+
+import {UserService} from './user.service';
 
 @Component({
   selector: 'l3co-user',
@@ -10,46 +9,28 @@ import {MatSnackBar} from '@angular/material';
 })
 export class UserComponent implements OnInit {
 
-  user: User = {id: '', name: '', mail: '', password: ''};
 
-  hasError = false;
-
-  singUpStatus = false;
-
-  constructor(private snackBar: MatSnackBar, private service: UserService) {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit() {
   }
 
-  singUp() {
-    if (this.singUpStatus) {
-      this.service.create(this.user)
-        .then(() => {
-          this.snackBar.open('Usuário criado com sucesso', 'Undo', {
-            duration: 2000,
-          });
-          this.deactivateLogout();
-        });
-    } else {
-      this.activateLogout();
-      return;
-    }
+  tryFacebookLogin() {
+    this.userService.doFacebookLogin()
+      .then(() => {
+      });
   }
 
-  login() {
-    if (this.singUpStatus) {
-      this.deactivateLogout();
-    } else {
-      this.hasError = !this.service.authentication(this.user);
-    }
+  tryGithubLogin() {
+    this.userService.doGithubLogin()
+      .then(() => {
+      });
   }
 
-  private deactivateLogout() {
-    this.singUpStatus = false;
-  }
-
-  private activateLogout() {
-    this.singUpStatus = true;
+  tryGoogleLogin() {
+    this.userService.doGoogleLogin()
+      .then(() => {
+      });
   }
 }

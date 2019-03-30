@@ -2,7 +2,7 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {Injectable} from '@angular/core';
 import {Startup} from './models/startup.models';
 import {Observable} from 'rxjs';
-import {UserService} from './user.service';
+import {UserService} from './user/user.service';
 import {Category} from './models/market.models';
 
 @Injectable({providedIn: 'root'})
