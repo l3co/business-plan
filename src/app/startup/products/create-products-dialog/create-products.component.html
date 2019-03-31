@@ -1,18 +1,25 @@
-<l3co-base-dialog
-  [title]="'Produtos'"
-  (action)="action($event)"
-  buttonSave="Salvar custo">
+<div class="container">
+  <h1 mat-dialog-title>Montetização</h1>
+  <form novalidate #formElement=ngForm>
+    <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <input name="name" required
-           [(ngModel)]="product.name"
-           matInput placeholder="Nome do produto">
-  </mat-form-field>
+      <mat-form-field color="accent">
+        <input name="name" required
+               [(ngModel)]="product.name"
+               matInput placeholder="Nome do produto">
+      </mat-form-field>
 
-  <mat-form-field color="accent">
+      <mat-form-field color="accent">
     <textarea name="objective" matInput required
               [(ngModel)]="product.objective"
               placeholder="Objetivo do produto informado">
     </textarea>
-  </mat-form-field>
-</l3co-base-dialog>
+      </mat-form-field>
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Fechar</button>
+      <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="save()">Cadastrar</button>
+    </div>
+  </form>
+</div>

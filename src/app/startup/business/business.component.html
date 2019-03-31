@@ -1,22 +1,33 @@
-<l3co-base-dialog
-  [title]="'Nova Idéa'"
-  (action)="action($event)"
-  buttonSave="Salvar Ideia">
-  <mat-form-field color="accent">
-    <input name="idea" matInput required
-           [(ngModel)]="startup.idea" placeholder="Ideia do applicativo">
-  </mat-form-field>
+<div class="container">
+  <h1 mat-dialog-title>Cadastrar idéia</h1>
+  <form novalidate #formElement=ngForm>
+    <mat-dialog-content>
 
-  <mat-form-field color="accent">
+
+      <mat-form-field color="accent">
+        <input name="idea" matInput required
+               [(ngModel)]="startup.idea" placeholder="Ideia do applicativo">
+      </mat-form-field>
+
+      <mat-form-field color="accent">
         <textarea name="objective" matInput required
                   [(ngModel)]="startup.objective"
                   placeholder="Objetivo o que você pretendo solucionar, qual dor você está atancando">
         </textarea>
-  </mat-form-field>
+      </mat-form-field>
+      <mat-form-field color="accent">
+        <mat-select required placeholder="Select" [(ngModel)]="startup.market">
+          <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <mat-select required placeholder="Select" [(ngModel)]="startup.market">
-      <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-</l3co-base-dialog>
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Fechar</button>
+      <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="save()">
+        Cadastrar
+      </button>
+    </div>
+
+  </form>
+</div>

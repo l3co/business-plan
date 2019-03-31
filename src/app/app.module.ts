@@ -53,7 +53,6 @@ import {MenuProductsComponent} from './dashboard/card-controls/menu-products/men
 import {BusinessComponent} from './startup/business/business.component';
 import {ListInvestmentsDialogComponent} from './startup/investments/list-investments-dialog/list-investments-dialog.component';
 import {ActionButtonComponent} from './shared/action-button/action-button.component';
-import {CreateDialogComponent} from './shared/create-dialog/create-dialog.component';
 import {ListConcurrencesDialogComponent} from './startup/concurrences/list-concurrences-dialog/list-concurrences-dialog.component';
 import {ListCostsDialogComponent} from './startup/costs/list-costs-dialog/list-costs-dialog.component';
 import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dialog/list-monetize-dialog.component';
@@ -104,7 +103,6 @@ registerLocaleData(localePt);
     ListProductsDialogComponent,
     ListCostsDialogComponent,
     ActionButtonComponent,
-    CreateDialogComponent,
     MenuShareComponent
   ],
   imports: [

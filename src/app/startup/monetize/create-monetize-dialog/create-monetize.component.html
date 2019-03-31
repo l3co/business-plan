@@ -1,19 +1,26 @@
-<l3co-base-dialog
-  [title]="'Formas de Montetização'"
-  (action)="action($event)"
-  buttonSave="Salvar Monetização">
+<div class="container">
+  <h1 mat-dialog-title>Montetização</h1>
+  <form novalidate #formElement=ngForm>
+    <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <input name="description" required
-           [(ngModel)]="monetize.description"
-           matInput placeholder="Forma de Monetização">
-  </mat-form-field>
+      <mat-form-field color="accent">
+        <input name="description" required
+               [(ngModel)]="monetize.description"
+               matInput placeholder="Forma de Monetização">
+      </mat-form-field>
 
-  <mat-form-field color="accent">
+      <mat-form-field color="accent">
     <textarea name="note" matInput required
               [(ngModel)]="monetize.note"
               placeholder="Descrição da monetização">
     </textarea>
-  </mat-form-field>
+      </mat-form-field>
 
-</l3co-base-dialog>
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Fechar</button>
+      <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="save()">Cadastrar</button>
+    </div>
+  </form>
+</div>

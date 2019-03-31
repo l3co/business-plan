@@ -1,18 +1,25 @@
-<l3co-base-dialog
-(action)="action($event)"
-title="Cadastrar investimento"
-[buttonSave]="'Salvar investimento'">
-  <mat-form-field color="accent">
-    <input name="investment" required
-           [(ngModel)]="investment.name"
-           matInput placeholder="Nome do investimento">
-  </mat-form-field>
+<div class="container">
+  <h1 mat-dialog-title>Investimentos</h1>
+  <form novalidate #formElement=ngForm>
+    <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <input type="number" name="value"
-           required matInput
-           [(ngModel)]="investment.value"
-           placeholder="Valor do investimento">
-  </mat-form-field>
-</l3co-base-dialog>
+      <mat-form-field color="accent">
+        <input name="investment" required
+               [(ngModel)]="investment.name"
+               matInput placeholder="Nome do investimento">
+      </mat-form-field>
 
+      <mat-form-field color="accent">
+        <input type="number" name="value"
+               required matInput
+               [(ngModel)]="investment.value"
+               placeholder="Valor do investimento">
+      </mat-form-field>
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Fechar</button>
+      <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="save()">Cadastrar</button>
+    </div>
+  </form>
+</div>

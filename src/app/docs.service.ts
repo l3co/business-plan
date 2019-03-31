@@ -32,7 +32,7 @@ export class DocsService {
     this.productsSession(startup, doc);
 
     doc.createParagraph('\n');
-    doc.createParagraph('Finanças\n');
+    doc.createParagraph('Finanças\n').heading1();
     doc.createParagraph('\n');
     this.investmentSession(startup, doc);
     doc.createParagraph('\n');

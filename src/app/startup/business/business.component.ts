@@ -3,7 +3,7 @@ import {StartupService} from '../../startup.service';
 import {builderStartup, Startup} from '../../models/startup.models';
 import {MatDialogRef} from '@angular/material';
 import {Category} from '../../models/market.models';
-import {CreateDialog} from '../../shared/create-dialog/create.dialog';
+import {CreateDialog} from '../../create.dialog';
 
 @Component({
   selector: 'l3co-business',

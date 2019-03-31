@@ -3,7 +3,7 @@ import {Startup} from '../../../models/startup.models';
 import {StartupService} from '../../../startup.service';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Investments} from '../../../models/finances.models';
-import {CreateDialog} from '../../../shared/create-dialog/create.dialog';
+import {CreateDialog} from '../../../create.dialog';
 
 @Component({
   selector: 'l3co-investments',

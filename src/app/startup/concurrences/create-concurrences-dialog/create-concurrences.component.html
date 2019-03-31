@@ -1,18 +1,27 @@
-<l3co-base-dialog
-  [title]="'Concorrentes'"
-  (action)="action($event)"
-  buttonSave="Salvar Concorrente">
+<div class="container">
+  <h1 mat-dialog-title>Concorrentes</h1>
+  <form novalidate #formElement=ngForm>
+    <mat-dialog-content>
 
-  <mat-form-field color="accent">
-    <input name="name" required
-           [(ngModel)]="concurrences.name"
-           matInput placeholder="Nome do concorrente">
-  </mat-form-field>
+      <mat-form-field color="accent">
+        <input name="name" required
+               [(ngModel)]="concurrences.name"
+               matInput placeholder="Nome do concorrente">
+      </mat-form-field>
 
-  <mat-form-field color="accent">
-    <input name="objective" matInput required
-           [(ngModel)]="concurrences.site"
-           placeholder="Site do concorrente">
-  </mat-form-field>
+      <mat-form-field color="accent">
+        <input name="objective" matInput required
+               [(ngModel)]="concurrences.site"
+               placeholder="Site do concorrente">
+      </mat-form-field>
 
-</l3co-base-dialog>
+    </mat-dialog-content>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Fechar</button>
+      <button mat-button [disabled]="formElement.invalid" class="bt-center" (click)="save()">Cadastrar</button>
+    </div>
+
+  </form>
+</div>
+
