@@ -5,9 +5,9 @@ import {Startup} from '../models/startup.models';
 
 @Component({
   selector: 'l3co-dashboard',
-  templateUrl: './dashboard.component.html'
+  templateUrl: './panel.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class PanelComponent implements OnInit {
 
   startup$: Observable<Startup[]>;
 

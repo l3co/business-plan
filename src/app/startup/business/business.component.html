@@ -16,8 +16,12 @@
         </textarea>
       </mat-form-field>
       <mat-form-field color="accent">
-        <mat-select required placeholder="Select" [(ngModel)]="startup.market">
-          <mat-option *ngFor="let category of categories" value="{{category.value}}">{{category.name}}</mat-option>
+        <mat-select required
+                    [(value)]="startup.market"
+                    name="market"
+                    [(ngModel)]="startup.market">
+          <mat-option *ngFor="let category of categories"
+                      value="{{category.value}}">{{category.name}}</mat-option>
         </mat-select>
       </mat-form-field>
     </mat-dialog-content>

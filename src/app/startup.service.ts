@@ -57,4 +57,11 @@ export class StartupService {
       .doc<Startup>(data.uid)
       .update(data);
   }
+
+  removeStartup(uid: string) {
+    return this
+      .startup$
+      .doc<Startup>(uid)
+      .delete();
+  }
 }

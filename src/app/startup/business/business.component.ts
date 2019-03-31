@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {StartupService} from '../../startup.service';
 import {builderStartup, Startup} from '../../models/startup.models';
-import {MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Category} from '../../models/market.models';
 import {CreateDialog} from '../../create.dialog';
 
@@ -16,11 +16,15 @@ export class BusinessComponent extends CreateDialog implements OnInit {
   categories: Category[];
 
   constructor(private service: StartupService,
-              private dialogRef: MatDialogRef<BusinessComponent>) {
+              private dialogRef: MatDialogRef<BusinessComponent>,
+              @Inject(MAT_DIALOG_DATA) private data: Startup) {
     super();
   }
 
   ngOnInit() {
+    if (this.data !== null && this.data !== undefined) {
+      this.startup = this.data;
+    }
     this.service.listAllCategory().subscribe(value => this.categories = value);
   }
 
@@ -29,7 +33,8 @@ export class BusinessComponent extends CreateDialog implements OnInit {
   }
 
   save(): void {
-    this.service.create(this.startup)
-      .then(() => this.dialogRef.close());
+    (this.startup.uid ?
+      this.service.update(this.startup)
+      : this.service.create(this.startup)).then(() => this.dialogRef.close());
   }
 }

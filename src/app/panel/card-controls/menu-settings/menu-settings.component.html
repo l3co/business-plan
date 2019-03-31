@@ -1,0 +1,22 @@
+<button
+  mat-mini-fab
+  color="primary"
+  class="card-button"
+  matTooltip="Configurações"
+  [matMenuTriggerFor]="menuSettings"
+  [matMenuTriggerData]="{startupAction: startup}">
+  <mat-icon>settings</mat-icon>
+</button>
+
+<mat-menu #menuSettings="matMenu" overlapTrigger="false">
+  <ng-template matMenuContent let-startupObj="startupAction">
+    <button mat-menu-item (click)="edit(startup)">
+      <mat-icon>edit</mat-icon>
+      <span>Editar</span>
+    </button>
+    <button mat-menu-item (click)="remove(startup.uid)">
+      <mat-icon>delete</mat-icon>
+      <span>Remover</span>
+    </button>
+  </ng-template>
+</mat-menu>
