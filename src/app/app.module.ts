@@ -58,7 +58,6 @@ import {ListCostsDialogComponent} from './startup/costs/list-costs-dialog/list-c
 import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dialog/list-monetize-dialog.component';
 import {ListProductsDialogComponent} from './startup/products/list-products-dialog/list-products-dialog.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import {MenuShareComponent} from './panel/card-controls/menu-share/menu-share.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MenuSettingsComponent} from './panel/card-controls/menu-settings/menu-settings.component';
 
@@ -98,7 +97,6 @@ registerLocaleData(localePt);
     MenuConcurrencesComponent,
     MenuMonetizeComponent,
     MenuProductsComponent,
-    MenuShareComponent,
     MenuSettingsComponent,
     ListInvestmentsDialogComponent,
     ListConcurrencesDialogComponent,

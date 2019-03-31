@@ -14,6 +14,10 @@
       <mat-icon>edit</mat-icon>
       <span>Editar</span>
     </button>
+    <button mat-menu-item (click)="exportDoc(startupObj)">
+      <mat-icon>file_copy</mat-icon>
+      <span>Exportar para Word</span>
+    </button>
     <button mat-menu-item (click)="remove(startup.uid)">
       <mat-icon>delete</mat-icon>
       <span>Remover</span>
