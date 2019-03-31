@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  mail: 'bplantools@gmail.com',
   firebase: {
     apiKey: 'AIzaSyAPz9Ce3a0hEBZ6ecbJ_-np5ceqTffnnZM',
     authDomain: 'business-plan-22782.firebaseapp.com',

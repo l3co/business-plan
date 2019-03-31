@@ -8,10 +8,4 @@
 
 <l3co-menu-products [startup]="startup"></l3co-menu-products>
 
-<button
-  mat-mini-fab color="accent"
-  (click)="exportFile(startup)"
-  class="card-button"
-  matTooltip="Export Word">
-  <mat-icon>save_alt</mat-icon>
-</button>
+<l3co-menu-share [startup]="startup"></l3co-menu-share>

@@ -15,6 +15,10 @@ export class UserService {
     return localStorage.getItem('user_id');
   }
 
+  getMailFromUserAuthenticated() {
+    return localStorage.getItem('user_mail');
+  }
+
   userEmpty(): boolean {
     const userId = localStorage.getItem('user_id');
     return userId === null || userId === undefined;
@@ -69,6 +73,7 @@ export class UserService {
 
   private setLocalStorage(res) {
     localStorage.setItem('user_id', res.user.uid);
+    localStorage.setItem('user_mail', res.user.email);
   }
 
   doGoogleLogin() {

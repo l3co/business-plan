@@ -1,0 +1,22 @@
+<button
+  mat-mini-fab
+  color="accent"
+  class="card-button"
+  matTooltip="Compartilhar"
+  [matMenuTriggerFor]="menuShare"
+  [matMenuTriggerData]="{startupAction: startup}">
+  <mat-icon>share</mat-icon>
+</button>
+
+<mat-menu #menuShare="matMenu" overlapTrigger="false">
+  <ng-template matMenuContent let-startupObj="startupAction">
+    <button mat-menu-item (click)="exportDoc(startupObj)">
+      <mat-icon>file_copy</mat-icon>
+      <span>Word</span>
+    </button>
+<!--    <button mat-menu-item (click)="exportMail(startupObj)">-->
+<!--      <mat-icon>list</mat-icon>-->
+<!--      <span>Exportar Email</span>-->
+<!--    </button>-->
+  </ng-template>
+</mat-menu>

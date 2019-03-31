@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  mail: 'bplantools@gmail.com',
+  mail_api_key: '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',
   firebase: {
     apiKey: 'AIzaSyAPz9Ce3a0hEBZ6ecbJ_-np5ceqTffnnZM',
     authDomain: 'business-plan-22782.firebaseapp.com',
