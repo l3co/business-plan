@@ -4,7 +4,7 @@
     <mat-card-title>Business Plan</mat-card-title>
     <mat-card-subtitle>Seja bem vindo!</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="../../assets/img/business.jpg" alt="Business Plan">
+  <img mat-card-image src="../../assets/img/business.jpg" class="mat-elevation-z3" alt="Business Plan">
   <mat-card-content>
     <p style="text-align: justify; font-size: x-small">
       Está ferramenta tem por objetivo ajudar usuários que desejam fazer seus planejamentos de
@@ -13,16 +13,16 @@
     </p>
   </mat-card-content>
   <mat-card-actions style="text-align: center">
-    <h5>Entrar</h5>
-    <button mat-fab (click)="tryGoogleLogin()" color="accent" class="social-btn">
+    <h5>ENTRAR</h5>
+    <button mat-fab (click)="tryGoogleLogin()" color="accent" class="social-btn mat-elevation-z5">
       <img src="../../assets/img/google.png" class="social">
     </button>
 
-    <button mat-fab color="accent" (click)="tryFacebookLogin()" class="social-btn">
+    <button mat-fab color="accent" (click)="tryFacebookLogin()" class="social-btn mat-elevation-z5">
       <img src="../../assets/img/facebook.png" class="social">
     </button>
 
-    <button mat-fab color="accent" (click)="tryGithubLogin()" class="social-btn">
+    <button mat-fab color="accent" (click)="tryGithubLogin()" class="social-btn mat-elevation-z5">
       <img src="../../assets/img/github.png" class="social">
     </button>
   </mat-card-actions>
