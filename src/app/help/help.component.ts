@@ -3,8 +3,7 @@ import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'l3co-help',
-  templateUrl: './help.component.html',
-  styleUrls: ['./help.component.scss']
+  templateUrl: './help.component.html'
 })
 export class HelpComponent implements OnInit {
 
