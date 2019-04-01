@@ -35,7 +35,7 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {PanelComponent} from './panel/panel.component';
-import {CardControlsComponent} from './panel/card-controls/card-controls.component';
+import {ButtonsControlComponent} from './panel/buttons-control/buttons-control.component';
 import {FormsModule} from '@angular/forms';
 import {CreateCostsComponent} from './startup/costs/create-costs-dialog/create-costs.component';
 import {CreateProductsComponent} from './startup/products/create-products-dialog/create-products.component';
@@ -45,11 +45,11 @@ import {CreateInvestmentsDialogComponent} from './startup/investments/create-inv
 import {HelpComponent} from './help/help.component';
 import {UserComponent} from './user/user.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
-import {MenuInvestmentComponent} from './panel/card-controls/menu-investment/menu-investment.component';
-import {MenuCostsComponent} from './panel/card-controls/menu-costs/menu-costs.component';
-import {MenuConcurrencesComponent} from './panel/card-controls/menu-concurrences/menu-concurrences.component';
-import {MenuMonetizeComponent} from './panel/card-controls/menu-monetize/menu-monetize.component';
-import {MenuProductsComponent} from './panel/card-controls/menu-products/menu-products.component';
+import {MenuInvestmentComponent} from './panel/buttons-control/menu-investment/menu-investment.component';
+import {MenuCostsComponent} from './panel/buttons-control/menu-costs/menu-costs.component';
+import {MenuConcurrencesComponent} from './panel/buttons-control/menu-concurrences/menu-concurrences.component';
+import {MenuMonetizeComponent} from './panel/buttons-control/menu-monetize/menu-monetize.component';
+import {MenuProductsComponent} from './panel/buttons-control/menu-products/menu-products.component';
 import {BusinessComponent} from './startup/business/business.component';
 import {ListInvestmentsDialogComponent} from './startup/investments/list-investments-dialog/list-investments-dialog.component';
 import {ActionButtonComponent} from './shared/action-button/action-button.component';
@@ -59,7 +59,8 @@ import {ListMonetizeDialogComponent} from './startup/monetize/list-monetize-dial
 import {ListProductsDialogComponent} from './startup/products/list-products-dialog/list-products-dialog.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {HttpClientModule} from '@angular/common/http';
-import {MenuSettingsComponent} from './panel/card-controls/menu-settings/menu-settings.component';
+import {MenuSettingsComponent} from './panel/buttons-control/menu-settings/menu-settings.component';
+import {PrivacyComponent} from './privacy/privacy.component';
 
 registerLocaleData(localePt);
 
@@ -84,7 +85,7 @@ registerLocaleData(localePt);
     HeaderComponent,
     PanelComponent,
     CreateInvestmentsDialogComponent,
-    CardControlsComponent,
+    ButtonsControlComponent,
     CreateCostsComponent,
     CreateProductsComponent,
     CreateConcurrencesComponent,
@@ -103,7 +104,8 @@ registerLocaleData(localePt);
     ListMonetizeDialogComponent,
     ListProductsDialogComponent,
     ListCostsDialogComponent,
-    ActionButtonComponent
+    ActionButtonComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,

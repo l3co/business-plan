@@ -3,9 +3,9 @@ import {Startup} from '../../models/startup.models';
 
 @Component({
   selector: 'l3co-action',
-  templateUrl: './card-controls.component.html'
+  templateUrl: './buttons-control.component.html'
 })
-export class CardControlsComponent implements OnInit {
+export class ButtonsControlComponent implements OnInit {
 
   @Input() startup: Startup;
 

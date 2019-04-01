@@ -1,21 +1,34 @@
-<mat-card
-  class="dash-card"
-  *ngFor="let startup of startup$ | async ">
-  <mat-card-header>
-    <mat-card-title>
-      {{ startup.idea }}
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p class="card-objective">{{startup.objective}}</p>
-    <p>Mercado de atuação: {{startup.market}}</p>
-    <mat-chip-list>
-      <mat-chip class="custom-ships investment">Investimentos
-        : {{ totalInvestments(startup) | currency: 'BRL'}}</mat-chip>
-      <mat-chip class="custom-ships costs">Custos : {{ totalCosts(startup) | currency: 'BRL'}}</mat-chip>
-    </mat-chip-list>
-  </mat-card-content>
-  <mat-card-actions>
-    <l3co-action [startup]="startup"></l3co-action>
-  </mat-card-actions>
-</mat-card>
+<l3co-user *ngIf="!hasUser()"></l3co-user>
+<div *ngIf="hasUser()">
+  <mat-card
+    class="dash-card"
+    *ngFor="let startup of startup$ | async ">
+    <mat-card-header>
+      <mat-card-title>
+        {{ startup.idea }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="card-objective">{{startup.objective}}</p>
+      <p>Mercado de atuação: {{startup.market}}</p>
+      <mat-chip-list>
+        <mat-chip class="custom-ships investment">Investimentos
+          : {{ totalInvestments(startup) | currency: 'BRL'}}</mat-chip>
+        <mat-chip class="custom-ships costs">Custos : {{ totalCosts(startup) | currency: 'BRL'}}</mat-chip>
+      </mat-chip-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <l3co-action [startup]="startup"></l3co-action>
+    </mat-card-actions>
+  </mat-card>
+
+  <button mat-mini-fab class="fab-bottom-out" color="primary" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+  <button mat-mini-fab class="fab-bottom-help" color="primary" (click)="help()">
+    <mat-icon>help</mat-icon>
+  </button>
+  <button mat-fab class="fab-bottom-add" color="primary" (click)="createStartup()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

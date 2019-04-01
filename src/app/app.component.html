@@ -1,16 +1,6 @@
 <l3co-header></l3co-header>
-
 <div class="container">
-  <router-outlet *ngIf="hasUser()"></router-outlet>
-  <l3co-user *ngIf="!hasUser()"></l3co-user>
+  <router-outlet></router-outlet>
 </div>
 
-<button *ngIf="hasUser()" mat-mini-fab class="fab-bottom-out" color="primary" (click)="logout()">
-  <mat-icon>exit_to_app</mat-icon>
-</button>
-<button *ngIf="hasUser()" mat-mini-fab class="fab-bottom-help" color="primary" (click)="help()">
-  <mat-icon>help</mat-icon>
-</button>
-<button *ngIf="hasUser()" mat-fab class="fab-bottom-add" color="primary" (click)="createStartup()">
-  <mat-icon>add</mat-icon>
-</button>
+
