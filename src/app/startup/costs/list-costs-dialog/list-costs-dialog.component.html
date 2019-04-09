@@ -13,7 +13,7 @@
       <tbody>
       <tr *ngFor="let cost of data.costs">
         <td>
-          <button mat-button (click)="removeCosts(cost)">Remover</button>
+          <button color="primary" mat-button (click)="removeCosts(cost)">Remover</button>
         </td>
         <td>{{cost.name}}</td>
         <td>{{cost.value | currency : "BRL"}}</td>

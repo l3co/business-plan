@@ -1,7 +1,7 @@
 <l3co-user *ngIf="!hasUser()"></l3co-user>
 <div *ngIf="hasUser()">
   <mat-card
-    class="dash-card"
+    class="dash-card mat-elevation-z5"
     *ngFor="let startup of startup$ | async ">
     <mat-card-header>
       <mat-card-title>

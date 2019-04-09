@@ -13,7 +13,7 @@
       <tbody>
       <tr *ngFor="let monetize of data.monetize">
         <td>
-          <button mat-button (click)="removeCosts(monetize)">Remover</button>
+          <button color="primary" mat-button (click)="removeCosts(monetize)">Remover</button>
         </td>
         <td>{{monetize.description}}</td>
         <td>{{monetize.note}}</td>

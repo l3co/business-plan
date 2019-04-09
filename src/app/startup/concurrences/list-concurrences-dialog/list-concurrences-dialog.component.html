@@ -13,7 +13,7 @@
       <tbody>
       <tr *ngFor="let concurrence of data.concurrences">
         <td>
-          <button mat-button (click)="removeConcurrences(concurrence)">Remover</button>
+          <button color="primary" mat-button (click)="removeConcurrences(concurrence)">Remover</button>
         </td>
         <td>{{concurrence.name}}</td>
         <td>{{concurrence.site}}</td>
