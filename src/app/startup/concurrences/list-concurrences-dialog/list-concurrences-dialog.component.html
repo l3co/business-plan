@@ -13,7 +13,9 @@
       <tbody>
       <tr *ngFor="let concurrence of data.concurrences">
         <td>
-          <button color="primary" mat-button (click)="removeConcurrences(concurrence)">Remover</button>
+          <button mat-mini-fab color="primary" mat-button (click)="removeConcurrences(concurrence)">
+            <mat-icon>delete</mat-icon>
+          </button>
         </td>
         <td>{{concurrence.name}}</td>
         <td>{{concurrence.site}}</td>

@@ -13,7 +13,9 @@
       <tbody>
       <tr *ngFor="let product of data.products">
         <td>
-          <button color="primary" mat-button (click)="removeProducts(product)">Remover</button>
+          <button mat-mini-fab color="primary" mat-button (click)="removeProducts(product)">
+            <mat-icon>delete</mat-icon>
+          </button>
         </td>
         <td>{{product.name}}</td>
         <td>{{product.objective}}</td>

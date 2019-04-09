@@ -13,7 +13,9 @@
       <tbody>
       <tr *ngFor="let monetize of data.monetize">
         <td>
-          <button color="primary" mat-button (click)="removeCosts(monetize)">Remover</button>
+          <button mat-mini-fab color="primary" mat-button (click)="removeCosts(monetize)">
+            <mat-icon>delete</mat-icon>
+          </button>
         </td>
         <td>{{monetize.description}}</td>
         <td>{{monetize.note}}</td>

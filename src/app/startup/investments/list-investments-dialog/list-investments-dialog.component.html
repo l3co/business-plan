@@ -13,7 +13,9 @@
       <tbody>
       <tr *ngFor="let investment of data.investments">
         <td>
-          <button color="primary" mat-button (click)="removeInvestment(investment)">Remover</button>
+          <button mat-mini-fab color="primary" mat-button (click)="removeInvestment(investment)">
+            <mat-icon>delete</mat-icon>
+          </button>
         </td>
         <td>{{investment.name}}</td>
         <td>{{investment.value | currency : "BRL"}}</td>
